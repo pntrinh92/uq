@@ -1,0 +1,2200 @@
+{
+ "T_A1": 1.1521775782010937,
+ "split": {
+  "A1": 1250,
+  "A2": 1250,
+  "test": 10000
+ },
+ "theta_err": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  1.0
+ ],
+ "group_sizes_A2": [
+  232,
+  203,
+  265,
+  262,
+  288
+ ],
+ "pac": {
+  "0.01": 0.013248750474229678,
+  "0.05": 0.05756143073837394,
+  "0.1": 0.11091267853069667
+ },
+ "ood_kind": {
+  "cifar100": "near",
+  "svhn": "far",
+  "lsun": "far",
+  "dtd": "far",
+  "noise": "far"
+ },
+ "scores": {
+  "msp": {
+   "auroc": {
+    "svhn": 99.544262,
+    "cifar100": 98.31619599999999,
+    "lsun": 98.52103999999999,
+    "dtd": 99.71783400000001,
+    "noise": 99.99181
+   },
+   "aupr": {
+    "svhn": 99.13282788757034,
+    "cifar100": 97.11353839096529,
+    "lsun": 97.14518666252432,
+    "dtd": 99.48707558482417,
+    "noise": 99.9184224746747
+   },
+   "fpr95": {
+    "svhn": 2.31,
+    "cifar100": 7.5200000000000005,
+    "lsun": 6.529999999999999,
+    "dtd": 1.4000000000000001,
+    "noise": 0.01
+   },
+   "marginal": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.89,
+      "id_far_per_group": [
+       4.543134252169474,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 99.16254666532136,
+      "id_acc_flagged": 57.30337078651685,
+      "tpr": {
+       "svhn": 87.92,
+       "cifar100": 72.56,
+       "lsun": 68.16,
+       "dtd": 93.42,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 6.916666666666667,
+       "brightness": 1.4000000000000001,
+       "contrast": 3.65,
+       "defocus_blur": 2.0500000000000003,
+       "elastic_transform": 5.1,
+       "fog": 4.35,
+       "frost": 4.25,
+       "gaussian_noise": 11.600000000000001,
+       "glass_blur": 23.9,
+       "impulse_noise": 9.85,
+       "jpeg_compression": 6.6000000000000005,
+       "motion_blur": 5.65,
+       "pixelate": 8.5,
+       "shot_noise": 10.100000000000001,
+       "snow": 3.85,
+       "zoom_blur": 2.9000000000000004
+      },
+      "shift_acc_accepted": 95.2515666965085,
+      "shift_acc_flagged": 47.08433734939759
+     },
+     "0.05": {
+      "id_far": 6.54,
+      "id_far_per_group": [
+       33.3843797856049,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 99.83950353092233,
+      "id_acc_flagged": 83.79204892966361,
+      "tpr": {
+       "svhn": 99.03999999999999,
+       "cifar100": 93.94,
+       "lsun": 95.0,
+       "dtd": 99.22,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 24.97,
+       "brightness": 9.700000000000001,
+       "contrast": 16.950000000000003,
+       "defocus_blur": 13.700000000000001,
+       "elastic_transform": 23.25,
+       "fog": 17.2,
+       "frost": 20.65,
+       "gaussian_noise": 38.45,
+       "glass_blur": 56.49999999999999,
+       "impulse_noise": 34.25,
+       "jpeg_compression": 29.799999999999997,
+       "motion_blur": 23.150000000000002,
+       "pixelate": 25.45,
+       "shot_noise": 32.35,
+       "snow": 16.950000000000003,
+       "zoom_blur": 16.2
+      },
+      "shift_acc_accepted": 99.08481052023636,
+      "shift_acc_flagged": 70.39113602990254
+     },
+     "0.1": {
+      "id_far": 10.82,
+      "id_far_per_group": [
+       55.028075548749364,
+       0.21668472372697722,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 99.89908051132541,
+      "id_acc_flagged": 89.64879852125694,
+      "tpr": {
+       "svhn": 99.62,
+       "cifar100": 96.66,
+       "lsun": 97.68,
+       "dtd": 99.56,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 33.08,
+       "brightness": 16.35,
+       "contrast": 24.099999999999998,
+       "defocus_blur": 20.150000000000002,
+       "elastic_transform": 30.099999999999998,
+       "fog": 24.0,
+       "frost": 29.4,
+       "gaussian_noise": 48.25,
+       "glass_blur": 67.7,
+       "impulse_noise": 43.2,
+       "jpeg_compression": 38.800000000000004,
+       "motion_blur": 30.75,
+       "pixelate": 33.85,
+       "shot_noise": 41.15,
+       "snow": 24.6,
+       "zoom_blur": 23.799999999999997
+      },
+      "shift_acc_accepted": 99.63638174935247,
+      "shift_acc_flagged": 76.30995566303909
+     }
+    },
+    "bh": {
+     "svhn": {
+      "fdr": 8.014981273408239,
+      "power": 98.24000000000001
+     },
+     "cifar100": {
+      "fdr": 8.248885285772193,
+      "power": 90.53999999999999
+     },
+     "lsun": {
+      "fdr": 8.195730970600081,
+      "power": 91.18
+     },
+     "dtd": {
+      "fdr": 7.982096232748974,
+      "power": 98.68
+     },
+     "noise": {
+      "fdr": 10.1930848675348,
+      "power": 100.0
+     }
+    }
+   },
+   "mondrian": {
+    "levels": {
+     "0.01": {
+      "id_far": 1.16,
+      "id_far_per_group": [
+       0.35732516590096985,
+       2.600216684723727,
+       1.263264274886306,
+       0.9514747859181731,
+       0.7568590350047304
+      ],
+      "id_acc_accepted": 98.79603399433428,
+      "id_acc_flagged": 98.27586206896551,
+      "tpr": {
+       "svhn": 69.94,
+       "cifar100": 50.92,
+       "lsun": 44.92,
+       "dtd": 83.7,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 3.543333333333333,
+       "brightness": 1.2,
+       "contrast": 2.25,
+       "defocus_blur": 1.7500000000000002,
+       "elastic_transform": 2.8000000000000003,
+       "fog": 2.7,
+       "frost": 2.8000000000000003,
+       "gaussian_noise": 4.9,
+       "glass_blur": 12.25,
+       "impulse_noise": 4.8500000000000005,
+       "jpeg_compression": 2.55,
+       "motion_blur": 2.35,
+       "pixelate": 4.05,
+       "shot_noise": 4.9,
+       "snow": 1.6,
+       "zoom_blur": 2.1999999999999997
+      },
+      "shift_acc_accepted": 92.99167156235961,
+      "shift_acc_flagged": 62.74694261523989
+     },
+     "0.05": {
+      "id_far": 5.029999999999999,
+      "id_far_per_group": [
+       4.2368555385400715,
+       5.037919826652221,
+       5.659423951490652,
+       6.517602283539486,
+       3.6896877956480605
+      ],
+      "id_acc_accepted": 99.08392123828578,
+      "id_acc_flagged": 93.24055666003976,
+      "tpr": {
+       "svhn": 87.1,
+       "cifar100": 72.1,
+       "lsun": 66.9,
+       "dtd": 93.10000000000001,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 11.546666666666667,
+       "brightness": 6.45,
+       "contrast": 10.45,
+       "defocus_blur": 6.550000000000001,
+       "elastic_transform": 8.6,
+       "fog": 9.35,
+       "frost": 10.0,
+       "gaussian_noise": 15.45,
+       "glass_blur": 27.200000000000003,
+       "impulse_noise": 14.000000000000002,
+       "jpeg_compression": 10.7,
+       "motion_blur": 10.299999999999999,
+       "pixelate": 13.3,
+       "shot_noise": 14.35,
+       "snow": 8.200000000000001,
+       "zoom_blur": 8.3
+      },
+      "shift_acc_accepted": 94.80705456738016,
+      "shift_acc_flagged": 69.80369515011547
+     },
+     "0.1": {
+      "id_far": 10.63,
+      "id_far_per_group": [
+       11.587544665645739,
+       11.91765980498375,
+       9.550277918140475,
+       11.465271170313986,
+       8.798486281929991
+      ],
+      "id_acc_accepted": 99.4517175786058,
+      "id_acc_flagged": 93.22671683913453,
+      "tpr": {
+       "svhn": 95.0,
+       "cifar100": 85.1,
+       "lsun": 83.64,
+       "dtd": 97.0,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 21.60333333333333,
+       "brightness": 13.05,
+       "contrast": 18.9,
+       "defocus_blur": 12.55,
+       "elastic_transform": 19.1,
+       "fog": 16.900000000000002,
+       "frost": 19.1,
+       "gaussian_noise": 30.3,
+       "glass_blur": 44.15,
+       "impulse_noise": 26.650000000000002,
+       "jpeg_compression": 21.85,
+       "motion_blur": 20.4,
+       "pixelate": 22.8,
+       "shot_noise": 26.150000000000002,
+       "snow": 16.55,
+       "zoom_blur": 15.6
+      },
+      "shift_acc_accepted": 96.71754751477529,
+      "shift_acc_flagged": 74.51010646505168
+     }
+    },
+    "bh": {
+     "svhn": {
+      "fdr": 6.4403627063473605,
+      "power": 80.47999999999999
+     },
+     "cifar100": {
+      "fdr": 6.589279617616935,
+      "power": 54.72
+     },
+     "lsun": {
+      "fdr": 6.951871657754011,
+      "power": 48.72
+     },
+     "dtd": {
+      "fdr": 6.481673224270034,
+      "power": 90.32
+     },
+     "noise": {
+      "fdr": 8.340971585701192,
+      "power": 100.0
+     }
+    }
+   }
+  },
+  "entropy": {
+   "auroc": {
+    "svhn": 99.65724,
+    "cifar100": 98.44800799999999,
+    "lsun": 98.70702600000001,
+    "dtd": 99.77836799999999,
+    "noise": 99.99982
+   },
+   "aupr": {
+    "svhn": 99.38346550505686,
+    "cifar100": 97.46474707921318,
+    "lsun": 97.63961601233068,
+    "dtd": 99.6127203995169,
+    "noise": 99.9990924883407
+   },
+   "fpr95": {
+    "svhn": 1.9800000000000002,
+    "cifar100": 7.26,
+    "lsun": 6.2,
+    "dtd": 0.65,
+    "noise": 0.0
+   },
+   "marginal": {
+    "levels": {
+     "0.01": {
+      "id_far": 1.01,
+      "id_far_per_group": [
+       5.15569167942828,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 99.1817355288413,
+      "id_acc_flagged": 60.396039603960396,
+      "tpr": {
+       "svhn": 92.30000000000001,
+       "cifar100": 78.10000000000001,
+       "lsun": 75.98,
+       "dtd": 95.36,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 8.48,
+       "brightness": 1.5,
+       "contrast": 4.65,
+       "defocus_blur": 2.35,
+       "elastic_transform": 6.950000000000001,
+       "fog": 4.95,
+       "frost": 5.75,
+       "gaussian_noise": 14.7,
+       "glass_blur": 29.25,
+       "impulse_noise": 12.45,
+       "jpeg_compression": 7.95,
+       "motion_blur": 6.5,
+       "pixelate": 10.0,
+       "shot_noise": 11.799999999999999,
+       "snow": 4.8,
+       "zoom_blur": 3.5999999999999996
+      },
+      "shift_acc_accepted": 95.82240675990677,
+      "shift_acc_flagged": 49.80345911949686
+     },
+     "0.05": {
+      "id_far": 6.38,
+      "id_far_per_group": [
+       32.567636549259824,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 99.81841486861782,
+      "id_acc_flagged": 83.69905956112854,
+      "tpr": {
+       "svhn": 99.1,
+       "cifar100": 94.0,
+       "lsun": 95.17999999999999,
+       "dtd": 99.24,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 24.9,
+       "brightness": 9.700000000000001,
+       "contrast": 17.05,
+       "defocus_blur": 13.3,
+       "elastic_transform": 23.25,
+       "fog": 17.25,
+       "frost": 20.599999999999998,
+       "gaussian_noise": 38.2,
+       "glass_blur": 56.65,
+       "impulse_noise": 33.900000000000006,
+       "jpeg_compression": 29.799999999999997,
+       "motion_blur": 22.95,
+       "pixelate": 25.45,
+       "shot_noise": 32.300000000000004,
+       "snow": 17.1,
+       "zoom_blur": 16.0
+      },
+      "shift_acc_accepted": 99.05903240124279,
+      "shift_acc_flagged": 70.38821954484605
+     },
+     "0.1": {
+      "id_far": 10.68,
+      "id_far_per_group": [
+       54.211332312404295,
+       0.3250270855904659,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 99.89923869234214,
+      "id_acc_flagged": 89.51310861423221,
+      "tpr": {
+       "svhn": 99.62,
+       "cifar100": 96.67999999999999,
+       "lsun": 97.72,
+       "dtd": 99.56,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 32.95,
+       "brightness": 15.950000000000001,
+       "contrast": 23.799999999999997,
+       "defocus_blur": 20.1,
+       "elastic_transform": 29.9,
+       "fog": 23.9,
+       "frost": 29.299999999999997,
+       "gaussian_noise": 48.25,
+       "glass_blur": 67.9,
+       "impulse_noise": 43.15,
+       "jpeg_compression": 38.85,
+       "motion_blur": 30.8,
+       "pixelate": 33.550000000000004,
+       "shot_noise": 41.0,
+       "snow": 24.3,
+       "zoom_blur": 23.5
+      },
+      "shift_acc_accepted": 99.62714392244594,
+      "shift_acc_flagged": 76.23672230652504
+     }
+    },
+    "bh": {
+     "svhn": {
+      "fdr": 7.791721296122869,
+      "power": 98.46000000000001
+     },
+     "cifar100": {
+      "fdr": 8.02106542434677,
+      "power": 90.82000000000001
+     },
+     "lsun": {
+      "fdr": 7.963000201085864,
+      "power": 91.53999999999999
+     },
+     "dtd": {
+      "fdr": 7.7713431720530535,
+      "power": 98.74000000000001
+     },
+     "noise": {
+      "fdr": 8.75912408759124,
+      "power": 100.0
+     }
+    }
+   },
+   "mondrian": {
+    "levels": {
+     "0.01": {
+      "id_far": 1.26,
+      "id_far_per_group": [
+       0.9698825931597753,
+       2.600216684723727,
+       1.263264274886306,
+       0.8563273073263558,
+       0.7568590350047304
+      ],
+      "id_acc_accepted": 98.86570791978934,
+      "id_acc_flagged": 92.85714285714286,
+      "tpr": {
+       "svhn": 85.68,
+       "cifar100": 67.82000000000001,
+       "lsun": 62.580000000000005,
+       "dtd": 92.56,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 5.433333333333333,
+       "brightness": 1.2,
+       "contrast": 3.15,
+       "defocus_blur": 2.0500000000000003,
+       "elastic_transform": 4.25,
+       "fog": 3.9,
+       "frost": 3.9,
+       "gaussian_noise": 8.649999999999999,
+       "glass_blur": 20.200000000000003,
+       "impulse_noise": 7.049999999999999,
+       "jpeg_compression": 4.7,
+       "motion_blur": 3.9,
+       "pixelate": 6.45,
+       "shot_noise": 7.1499999999999995,
+       "snow": 2.45,
+       "zoom_blur": 2.5
+      },
+      "shift_acc_accepted": 93.90553401480437,
+      "shift_acc_flagged": 57.36196319018405
+     },
+     "0.05": {
+      "id_far": 5.2,
+      "id_far_per_group": [
+       4.849412965798877,
+       4.8754062838569885,
+       6.1647296614451745,
+       6.4224548049476695,
+       3.6896877956480605
+      ],
+      "id_acc_accepted": 99.12447257383967,
+      "id_acc_flagged": 92.6923076923077,
+      "tpr": {
+       "svhn": 92.14,
+       "cifar100": 78.02,
+       "lsun": 75.82,
+       "dtd": 95.38,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 13.253333333333334,
+       "brightness": 6.45,
+       "contrast": 11.600000000000001,
+       "defocus_blur": 6.950000000000001,
+       "elastic_transform": 10.6,
+       "fog": 9.9,
+       "frost": 11.600000000000001,
+       "gaussian_noise": 18.45,
+       "glass_blur": 33.1,
+       "impulse_noise": 17.05,
+       "jpeg_compression": 12.15,
+       "motion_blur": 11.05,
+       "pixelate": 15.049999999999999,
+       "shot_noise": 16.35,
+       "snow": 9.25,
+       "zoom_blur": 9.25
+      },
+      "shift_acc_accepted": 95.50799262219489,
+      "shift_acc_flagged": 68.43561368209255
+     },
+     "0.1": {
+      "id_far": 10.23,
+      "id_far_per_group": [
+       10.10719754977029,
+       11.43011917659805,
+       9.348155634158665,
+       11.70313986679353,
+       8.656575212866603
+      ],
+      "id_acc_accepted": 99.37618358026067,
+      "id_acc_flagged": 93.64613880742912,
+      "tpr": {
+       "svhn": 95.14,
+       "cifar100": 84.98,
+       "lsun": 83.6,
+       "dtd": 97.08,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 20.97,
+       "brightness": 12.65,
+       "contrast": 18.45,
+       "defocus_blur": 12.3,
+       "elastic_transform": 18.3,
+       "fog": 16.400000000000002,
+       "frost": 18.55,
+       "gaussian_noise": 29.349999999999998,
+       "glass_blur": 44.15,
+       "impulse_noise": 25.95,
+       "jpeg_compression": 20.849999999999998,
+       "motion_blur": 19.400000000000002,
+       "pixelate": 22.25,
+       "shot_noise": 25.3,
+       "snow": 15.65,
+       "zoom_blur": 15.0
+      },
+      "shift_acc_accepted": 96.61310051035473,
+      "shift_acc_flagged": 74.23303131457638
+     }
+    },
+    "bh": {
+     "svhn": {
+      "fdr": 6.470712624233453,
+      "power": 88.46000000000001
+     },
+     "cifar100": {
+      "fdr": 6.075400054244643,
+      "power": 69.26
+     },
+     "lsun": {
+      "fdr": 6.018112766579025,
+      "power": 64.34
+     },
+     "dtd": {
+      "fdr": 6.129807692307692,
+      "power": 93.72
+     },
+     "noise": {
+      "fdr": 8.800729594163247,
+      "power": 100.0
+     }
+    }
+   }
+  },
+  "energy": {
+   "auroc": {
+    "svhn": 99.76081199999999,
+    "cifar100": 98.46714800000001,
+    "lsun": 99.01619600000001,
+    "dtd": 99.85511400000001,
+    "noise": 99.99247
+   },
+   "aupr": {
+    "svhn": 99.58991919968048,
+    "cifar100": 97.7136256370363,
+    "lsun": 98.26287393034946,
+    "dtd": 99.75090306833022,
+    "noise": 99.93174431424409
+   },
+   "fpr95": {
+    "svhn": 0.7100000000000001,
+    "cifar100": 7.26,
+    "lsun": 5.06,
+    "dtd": 0.25,
+    "noise": 0.01
+   },
+   "marginal": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.84,
+      "id_far_per_group": [
+       4.287901990811639,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 99.0722065348931,
+      "id_acc_flagged": 65.47619047619048,
+      "tpr": {
+       "svhn": 95.48,
+       "cifar100": 82.82000000000001,
+       "lsun": 82.67999999999999,
+       "dtd": 97.34,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 9.503333333333334,
+       "brightness": 1.35,
+       "contrast": 5.55,
+       "defocus_blur": 2.75,
+       "elastic_transform": 7.5,
+       "fog": 5.55,
+       "frost": 7.249999999999999,
+       "gaussian_noise": 17.1,
+       "glass_blur": 33.2,
+       "impulse_noise": 13.65,
+       "jpeg_compression": 8.3,
+       "motion_blur": 7.000000000000001,
+       "pixelate": 11.25,
+       "shot_noise": 12.9,
+       "snow": 4.9,
+       "zoom_blur": 4.3
+      },
+      "shift_acc_accepted": 95.95933551880364,
+      "shift_acc_flagged": 53.454928095405116
+     },
+     "0.05": {
+      "id_far": 6.04,
+      "id_far_per_group": [
+       30.781010719754974,
+       0.054171180931744306,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 99.69135802469135,
+      "id_acc_flagged": 84.76821192052981,
+      "tpr": {
+       "svhn": 99.36,
+       "cifar100": 94.24,
+       "lsun": 95.88,
+       "dtd": 99.42,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 25.516666666666666,
+       "brightness": 9.950000000000001,
+       "contrast": 18.05,
+       "defocus_blur": 12.950000000000001,
+       "elastic_transform": 22.85,
+       "fog": 17.65,
+       "frost": 22.25,
+       "gaussian_noise": 39.5,
+       "glass_blur": 59.45,
+       "impulse_noise": 34.35,
+       "jpeg_compression": 30.2,
+       "motion_blur": 23.400000000000002,
+       "pixelate": 26.1,
+       "shot_noise": 32.4,
+       "snow": 17.4,
+       "zoom_blur": 16.25
+      },
+      "shift_acc_accepted": 99.05571716267622,
+      "shift_acc_flagged": 71.0907903331156
+     },
+     "0.1": {
+      "id_far": 10.299999999999999,
+      "id_far_per_group": [
+       49.208779989790706,
+       3.5752979414951245,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 99.79933110367894,
+      "id_acc_flagged": 90.0,
+      "tpr": {
+       "svhn": 99.66000000000001,
+       "cifar100": 96.32,
+       "lsun": 97.92,
+       "dtd": 99.7,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 32.75,
+       "brightness": 15.299999999999999,
+       "contrast": 24.099999999999998,
+       "defocus_blur": 18.65,
+       "elastic_transform": 29.299999999999997,
+       "fog": 23.799999999999997,
+       "frost": 29.549999999999997,
+       "gaussian_noise": 48.1,
+       "glass_blur": 68.89999999999999,
+       "impulse_noise": 43.25,
+       "jpeg_compression": 38.75,
+       "motion_blur": 30.55,
+       "pixelate": 33.5,
+       "shot_noise": 40.550000000000004,
+       "snow": 23.5,
+       "zoom_blur": 23.45
+      },
+      "shift_acc_accepted": 99.50929368029739,
+      "shift_acc_flagged": 76.33587786259542
+     }
+    },
+    "bh": {
+     "svhn": {
+      "fdr": 8.201892744479496,
+      "power": 98.94
+     },
+     "cifar100": {
+      "fdr": 8.157999206034141,
+      "power": 92.54
+     },
+     "lsun": {
+      "fdr": 8.035190615835777,
+      "power": 94.08
+     },
+     "dtd": {
+      "fdr": 8.27790096082779,
+      "power": 99.28
+     },
+     "noise": {
+      "fdr": 8.88382687927107,
+      "power": 100.0
+     }
+    }
+   },
+   "mondrian": {
+    "levels": {
+     "0.01": {
+      "id_far": 1.0,
+      "id_far_per_group": [
+       0.9188361408882083,
+       1.3001083423618636,
+       1.1116725618999495,
+       1.4272121788772598,
+       0.28382213812677387
+      ],
+      "id_acc_accepted": 98.86868686868688,
+      "id_acc_flagged": 91.0,
+      "tpr": {
+       "svhn": 88.9,
+       "cifar100": 70.64,
+       "lsun": 67.80000000000001,
+       "dtd": 94.36,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 5.193333333333333,
+       "brightness": 1.3,
+       "contrast": 3.1,
+       "defocus_blur": 1.5,
+       "elastic_transform": 3.85,
+       "fog": 3.55,
+       "frost": 3.9,
+       "gaussian_noise": 8.3,
+       "glass_blur": 20.75,
+       "impulse_noise": 6.45,
+       "jpeg_compression": 4.55,
+       "motion_blur": 3.5000000000000004,
+       "pixelate": 6.9,
+       "shot_noise": 6.45,
+       "snow": 2.45,
+       "zoom_blur": 1.35
+      },
+      "shift_acc_accepted": 94.05105126221784,
+      "shift_acc_flagged": 53.01668806161746
+     },
+     "0.05": {
+      "id_far": 5.2,
+      "id_far_per_group": [
+       4.0326697294538025,
+       7.096424702058505,
+       6.366851945426983,
+       5.566127497621313,
+       3.1693472090823085
+      ],
+      "id_acc_accepted": 98.99789029535864,
+      "id_acc_flagged": 95.0,
+      "tpr": {
+       "svhn": 95.14,
+       "cifar100": 81.72,
+       "lsun": 81.88,
+       "dtd": 97.22,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 12.943333333333335,
+       "brightness": 6.15,
+       "contrast": 11.05,
+       "defocus_blur": 5.3,
+       "elastic_transform": 9.75,
+       "fog": 9.4,
+       "frost": 11.600000000000001,
+       "gaussian_noise": 20.4,
+       "glass_blur": 35.9,
+       "impulse_noise": 15.65,
+       "jpeg_compression": 11.95,
+       "motion_blur": 9.85,
+       "pixelate": 14.799999999999999,
+       "shot_noise": 15.950000000000001,
+       "snow": 8.55,
+       "zoom_blur": 7.85
+      },
+      "shift_acc_accepted": 95.65417161235976,
+      "shift_acc_flagged": 66.8040175122328
+     },
+     "0.1": {
+      "id_far": 10.459999999999999,
+      "id_far_per_group": [
+       10.10719754977029,
+       11.484290357529794,
+       10.611419909044972,
+       12.226450999048526,
+       7.994323557237465
+      ],
+      "id_acc_accepted": 99.21822649095377,
+      "id_acc_flagged": 95.12428298279158,
+      "tpr": {
+       "svhn": 98.0,
+       "cifar100": 89.03999999999999,
+       "lsun": 90.36,
+       "dtd": 98.8,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 22.833333333333332,
+       "brightness": 12.8,
+       "contrast": 19.900000000000002,
+       "defocus_blur": 12.4,
+       "elastic_transform": 18.65,
+       "fog": 18.2,
+       "frost": 21.099999999999998,
+       "gaussian_noise": 33.4,
+       "glass_blur": 50.14999999999999,
+       "impulse_noise": 28.4,
+       "jpeg_compression": 23.150000000000002,
+       "motion_blur": 20.7,
+       "pixelate": 24.25,
+       "shot_noise": 27.700000000000003,
+       "snow": 17.45,
+       "zoom_blur": 14.249999999999998
+      },
+      "shift_acc_accepted": 97.2829373650108,
+      "shift_acc_flagged": 73.7956204379562
+     }
+    },
+    "bh": {
+     "svhn": {
+      "fdr": 5.689410811905244,
+      "power": 93.16
+     },
+     "cifar100": {
+      "fdr": 5.959123368628417,
+      "power": 76.38000000000001
+     },
+     "lsun": {
+      "fdr": 6.033408127648966,
+      "power": 75.38
+     },
+     "dtd": {
+      "fdr": 5.695208169677926,
+      "power": 96.04
+     },
+     "noise": {
+      "fdr": 6.191369606003752,
+      "power": 100.0
+     }
+    }
+   }
+  },
+  "maha_z": {
+   "auroc": {
+    "svhn": 99.92023,
+    "cifar100": 99.024466,
+    "lsun": 99.59876600000001,
+    "dtd": 99.920708,
+    "noise": 99.99671
+   },
+   "aupr": {
+    "svhn": 99.8046577077106,
+    "cifar100": 98.34756131448364,
+    "lsun": 99.16415361222398,
+    "dtd": 99.84024564611698,
+    "noise": 99.9800690631153
+   },
+   "fpr95": {
+    "svhn": 0.21,
+    "cifar100": 4.61,
+    "lsun": 1.81,
+    "dtd": 0.12,
+    "noise": 0.01
+   },
+   "marginal": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.9400000000000001,
+      "id_far_per_group": [
+       4.747320061255743,
+       0.054171180931744306,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 98.98041590954976,
+      "id_acc_flagged": 78.72340425531915,
+      "tpr": {
+       "svhn": 98.76,
+       "cifar100": 86.78,
+       "lsun": 91.94,
+       "dtd": 98.92,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 12.396666666666667,
+       "brightness": 1.7000000000000002,
+       "contrast": 7.5,
+       "defocus_blur": 4.0,
+       "elastic_transform": 8.799999999999999,
+       "fog": 7.3999999999999995,
+       "frost": 9.15,
+       "gaussian_noise": 22.75,
+       "glass_blur": 41.0,
+       "impulse_noise": 20.45,
+       "jpeg_compression": 11.1,
+       "motion_blur": 9.75,
+       "pixelate": 13.850000000000001,
+       "shot_noise": 17.25,
+       "snow": 5.7,
+       "zoom_blur": 5.55
+      },
+      "shift_acc_accepted": 96.31292568775922,
+      "shift_acc_flagged": 60.876579725732725
+     },
+     "0.05": {
+      "id_far": 6.18,
+      "id_far_per_group": [
+       27.71822358346095,
+       3.358613217768147,
+       0.6568974229408793,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 99.52035813259434,
+      "id_acc_flagged": 87.70226537216828,
+      "tpr": {
+       "svhn": 99.86,
+       "cifar100": 96.26,
+       "lsun": 98.58,
+       "dtd": 99.68,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 29.526666666666667,
+       "brightness": 10.5,
+       "contrast": 21.9,
+       "defocus_blur": 14.799999999999999,
+       "elastic_transform": 24.85,
+       "fog": 20.25,
+       "frost": 24.15,
+       "gaussian_noise": 46.7,
+       "glass_blur": 68.55,
+       "impulse_noise": 44.75,
+       "jpeg_compression": 33.550000000000004,
+       "motion_blur": 26.85,
+       "pixelate": 29.75,
+       "shot_noise": 37.6,
+       "snow": 18.6,
+       "zoom_blur": 20.1
+      },
+      "shift_acc_accepted": 99.14388421152209,
+      "shift_acc_flagged": 74.6782569428765
+     },
+     "0.1": {
+      "id_far": 10.57,
+      "id_far_per_group": [
+       42.87901990811638,
+       9.479956663055255,
+       2.0717534108135425,
+       0.04757373929590866,
+       0.0
+      ],
+      "id_acc_accepted": 99.72045174997206,
+      "id_acc_flagged": 90.91769157994324,
+      "tpr": {
+       "svhn": 99.96000000000001,
+       "cifar100": 97.76,
+       "lsun": 99.48,
+       "dtd": 99.86,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 38.196666666666665,
+       "brightness": 16.85,
+       "contrast": 31.0,
+       "defocus_blur": 22.5,
+       "elastic_transform": 32.65,
+       "fog": 27.900000000000002,
+       "frost": 32.05,
+       "gaussian_noise": 57.099999999999994,
+       "glass_blur": 76.75,
+       "impulse_noise": 57.199999999999996,
+       "jpeg_compression": 42.699999999999996,
+       "motion_blur": 36.449999999999996,
+       "pixelate": 37.55,
+       "shot_noise": 47.75,
+       "snow": 26.6,
+       "zoom_blur": 27.900000000000002
+      },
+      "shift_acc_accepted": 99.56313035974327,
+      "shift_acc_flagged": 79.55318963260319
+     }
+    },
+    "bh": {
+     "svhn": {
+      "fdr": 7.8558225508317925,
+      "power": 99.7
+     },
+     "cifar100": {
+      "fdr": 8.073929961089494,
+      "power": 94.5
+     },
+     "lsun": {
+      "fdr": 7.890772128060264,
+      "power": 97.82
+     },
+     "dtd": {
+      "fdr": 7.87037037037037,
+      "power": 99.5
+     },
+     "noise": {
+      "fdr": 7.106363214119833,
+      "power": 100.0
+     }
+    }
+   },
+   "mondrian": {
+    "levels": {
+     "0.01": {
+      "id_far": 1.17,
+      "id_far_per_group": [
+       1.3782542113323124,
+       2.112676056338028,
+       1.4653865588681152,
+       0.23786869647954328,
+       0.804162724692526
+      ],
+      "id_acc_accepted": 98.8869776383689,
+      "id_acc_flagged": 90.5982905982906,
+      "tpr": {
+       "svhn": 96.44,
+       "cifar100": 77.5,
+       "lsun": 81.94,
+       "dtd": 97.64,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 7.886666666666667,
+       "brightness": 1.5,
+       "contrast": 5.7,
+       "defocus_blur": 2.5,
+       "elastic_transform": 5.050000000000001,
+       "fog": 4.8,
+       "frost": 5.1499999999999995,
+       "gaussian_noise": 13.0,
+       "glass_blur": 29.049999999999997,
+       "impulse_noise": 13.5,
+       "jpeg_compression": 6.25,
+       "motion_blur": 5.35,
+       "pixelate": 9.55,
+       "shot_noise": 10.15,
+       "snow": 3.5000000000000004,
+       "zoom_blur": 3.25
+      },
+      "shift_acc_accepted": 94.61532894260694,
+      "shift_acc_flagged": 60.43956043956044
+     },
+     "0.05": {
+      "id_far": 4.590000000000001,
+      "id_far_per_group": [
+       4.747320061255743,
+       4.604550379198267,
+       6.417382516422436,
+       3.56803044719315,
+       3.736991485335856
+      ],
+      "id_acc_accepted": 98.94141075358978,
+      "id_acc_flagged": 95.64270152505446,
+      "tpr": {
+       "svhn": 98.94,
+       "cifar100": 87.66000000000001,
+       "lsun": 92.80000000000001,
+       "dtd": 99.08,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 18.906666666666666,
+       "brightness": 7.249999999999999,
+       "contrast": 16.3,
+       "defocus_blur": 8.450000000000001,
+       "elastic_transform": 13.450000000000001,
+       "fog": 12.7,
+       "frost": 15.35,
+       "gaussian_noise": 30.099999999999998,
+       "glass_blur": 47.449999999999996,
+       "impulse_noise": 33.550000000000004,
+       "jpeg_compression": 17.549999999999997,
+       "motion_blur": 15.35,
+       "pixelate": 18.85,
+       "shot_noise": 24.65,
+       "snow": 11.450000000000001,
+       "zoom_blur": 11.15
+      },
+      "shift_acc_accepted": 96.03337717855969,
+      "shift_acc_flagged": 74.27715091678421
+     },
+     "0.1": {
+      "id_far": 9.82,
+      "id_far_per_group": [
+       8.984175599795813,
+       11.05092091007584,
+       10.1566447700859,
+       10.371075166508087,
+       8.656575212866603
+      ],
+      "id_acc_accepted": 99.10179640718563,
+      "id_acc_flagged": 95.9266802443992,
+      "tpr": {
+       "svhn": 99.4,
+       "cifar100": 91.58,
+       "lsun": 96.04,
+       "dtd": 99.44,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 28.896666666666665,
+       "brightness": 13.850000000000001,
+       "contrast": 26.400000000000002,
+       "defocus_blur": 16.35,
+       "elastic_transform": 22.5,
+       "fog": 21.099999999999998,
+       "frost": 24.85,
+       "gaussian_noise": 44.95,
+       "glass_blur": 61.0,
+       "impulse_noise": 46.25,
+       "jpeg_compression": 28.499999999999996,
+       "motion_blur": 24.65,
+       "pixelate": 27.900000000000002,
+       "shot_noise": 37.1,
+       "snow": 20.0,
+       "zoom_blur": 18.05
+      },
+      "shift_acc_accepted": 96.9105995968309,
+      "shift_acc_flagged": 79.64009689698928
+     }
+    },
+    "bh": {
+     "svhn": {
+      "fdr": 6.859410430839002,
+      "power": 98.58
+     },
+     "cifar100": {
+      "fdr": 7.180616740088105,
+      "power": 84.28
+     },
+     "lsun": {
+      "fdr": 7.038733860891296,
+      "power": 89.28
+     },
+     "dtd": {
+      "fdr": 6.846473029045644,
+      "power": 98.78
+     },
+     "noise": {
+      "fdr": 8.634079488350844,
+      "power": 100.0
+     }
+    }
+   }
+  },
+  "rmd_z": {
+   "auroc": {
+    "svhn": 74.886976,
+    "cifar100": 85.53707199999998,
+    "lsun": 86.134002,
+    "dtd": 78.529978,
+    "noise": 83.65871999999999
+   },
+   "aupr": {
+    "svhn": 76.87338170972278,
+    "cifar100": 87.26093180281619,
+    "lsun": 87.09135272675243,
+    "dtd": 81.1704754962535,
+    "noise": 52.95820909673689
+   },
+   "fpr95": {
+    "svhn": 100.0,
+    "cifar100": 100.0,
+    "lsun": 99.99,
+    "dtd": 100.0,
+    "noise": 99.33999999999999
+   },
+   "marginal": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.7000000000000001,
+      "id_far_per_group": [
+       3.573251659009699,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 99.10372608257805,
+      "id_acc_flagged": 54.285714285714285,
+      "tpr": {
+       "svhn": 22.82,
+       "cifar100": 54.58,
+       "lsun": 44.96,
+       "dtd": 35.46,
+       "noise": 0.0
+      },
+      "shift_flag": {
+       "all": 7.123333333333333,
+       "brightness": 1.25,
+       "contrast": 3.9,
+       "defocus_blur": 2.15,
+       "elastic_transform": 6.05,
+       "fog": 3.95,
+       "frost": 5.0,
+       "gaussian_noise": 12.950000000000001,
+       "glass_blur": 24.099999999999998,
+       "impulse_noise": 8.200000000000001,
+       "jpeg_compression": 7.3999999999999995,
+       "motion_blur": 6.0,
+       "pixelate": 9.0,
+       "shot_noise": 10.35,
+       "snow": 4.05,
+       "zoom_blur": 2.5
+      },
+      "shift_acc_accepted": 95.1261529627104,
+      "shift_acc_flagged": 50.116986429574176
+     },
+     "0.05": {
+      "id_far": 6.279999999999999,
+      "id_far_per_group": [
+       31.495661051556915,
+       0.37919826652221017,
+       0.1010611419909045,
+       0.04757373929590866,
+       0.04730368968779565
+      ],
+      "id_acc_accepted": 99.78659837814767,
+      "id_acc_flagged": 83.9171974522293,
+      "tpr": {
+       "svhn": 72.39999999999999,
+       "cifar100": 82.64,
+       "lsun": 83.48,
+       "dtd": 77.03999999999999,
+       "noise": 70.55
+      },
+      "shift_flag": {
+       "all": 23.186666666666667,
+       "brightness": 9.15,
+       "contrast": 14.649999999999999,
+       "defocus_blur": 12.55,
+       "elastic_transform": 22.45,
+       "fog": 15.55,
+       "frost": 18.8,
+       "gaussian_noise": 36.0,
+       "glass_blur": 52.449999999999996,
+       "impulse_noise": 28.050000000000004,
+       "jpeg_compression": 27.35,
+       "motion_blur": 22.0,
+       "pixelate": 25.2,
+       "shot_noise": 31.65,
+       "snow": 17.299999999999997,
+       "zoom_blur": 14.649999999999999
+      },
+      "shift_acc_accepted": 98.49418503731991,
+      "shift_acc_flagged": 70.14088556641748
+     },
+     "0.1": {
+      "id_far": 10.94,
+      "id_far_per_group": [
+       45.89076059213885,
+       5.52546045503792,
+       2.2738756947953513,
+       1.3320647002854424,
+       0.9460737937559129
+      ],
+      "id_acc_accepted": 99.84280260498541,
+      "id_acc_flagged": 90.21937842778793,
+      "tpr": {
+       "svhn": 74.96000000000001,
+       "cifar100": 84.76,
+       "lsun": 85.86,
+       "dtd": 78.64,
+       "noise": 82.1
+      },
+      "shift_flag": {
+       "all": 28.886666666666667,
+       "brightness": 14.000000000000002,
+       "contrast": 19.400000000000002,
+       "defocus_blur": 17.849999999999998,
+       "elastic_transform": 28.050000000000004,
+       "fog": 21.099999999999998,
+       "frost": 24.25,
+       "gaussian_noise": 41.55,
+       "glass_blur": 58.650000000000006,
+       "impulse_noise": 32.75,
+       "jpeg_compression": 34.050000000000004,
+       "motion_blur": 28.999999999999996,
+       "pixelate": 30.0,
+       "shot_noise": 37.45,
+       "snow": 23.799999999999997,
+       "zoom_blur": 21.4
+      },
+      "shift_acc_accepted": 98.76722602418675,
+      "shift_acc_flagged": 75.06346642049388
+     }
+    },
+    "bh": {
+     "svhn": {
+      "fdr": 8.238825883922615,
+      "power": 55.02
+     },
+     "cifar100": {
+      "fdr": 8.155339805825243,
+      "power": 75.68
+     },
+     "lsun": {
+      "fdr": 8.161282487247997,
+      "power": 75.62
+     },
+     "dtd": {
+      "fdr": 8.016085790884718,
+      "power": 68.62
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   },
+   "mondrian": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.79,
+      "id_far_per_group": [
+       0.7146503318019397,
+       1.2459371614301191,
+       0.5558362809499747,
+       0.7611798287345386,
+       0.7095553453169348
+      ],
+      "id_acc_accepted": 98.87108154419917,
+      "id_acc_flagged": 88.60759493670885,
+      "tpr": {
+       "svhn": 3.0,
+       "cifar100": 21.04,
+       "lsun": 13.239999999999998,
+       "dtd": 6.36,
+       "noise": 0.0
+      },
+      "shift_flag": {
+       "all": 2.626666666666667,
+       "brightness": 0.65,
+       "contrast": 1.0999999999999999,
+       "defocus_blur": 0.8999999999999999,
+       "elastic_transform": 2.8000000000000003,
+       "fog": 1.3,
+       "frost": 1.8499999999999999,
+       "gaussian_noise": 4.75,
+       "glass_blur": 8.3,
+       "impulse_noise": 2.45,
+       "jpeg_compression": 2.55,
+       "motion_blur": 1.7500000000000002,
+       "pixelate": 4.0,
+       "shot_noise": 4.2,
+       "snow": 1.7500000000000002,
+       "zoom_blur": 1.05
+      },
+      "shift_acc_accepted": 92.9960290291661,
+      "shift_acc_flagged": 52.03045685279187
+     },
+     "0.05": {
+      "id_far": 3.7800000000000002,
+      "id_far_per_group": [
+       2.909647779479326,
+       4.2795232936078005,
+       3.3855482566953006,
+       4.043767840152237,
+       4.257332071901608
+      ],
+      "id_acc_accepted": 99.02307212637706,
+      "id_acc_flagged": 92.85714285714286,
+      "tpr": {
+       "svhn": 17.419999999999998,
+       "cifar100": 49.84,
+       "lsun": 39.24,
+       "dtd": 28.96,
+       "noise": 0.0
+      },
+      "shift_flag": {
+       "all": 8.096666666666668,
+       "brightness": 3.35,
+       "contrast": 5.35,
+       "defocus_blur": 3.45,
+       "elastic_transform": 8.85,
+       "fog": 5.8500000000000005,
+       "frost": 6.1,
+       "gaussian_noise": 12.5,
+       "glass_blur": 22.45,
+       "impulse_noise": 7.35,
+       "jpeg_compression": 8.35,
+       "motion_blur": 6.950000000000001,
+       "pixelate": 9.950000000000001,
+       "shot_noise": 10.6,
+       "snow": 6.0,
+       "zoom_blur": 4.35
+      },
+      "shift_acc_accepted": 94.59577091871894,
+      "shift_acc_flagged": 61.547962124331
+     },
+     "0.1": {
+      "id_far": 10.41,
+      "id_far_per_group": [
+       10.209290454313425,
+       9.967497291440953,
+       6.922688226376958,
+       13.082778306374882,
+       11.589403973509933
+      ],
+      "id_acc_accepted": 99.4084161178703,
+      "id_acc_flagged": 93.46781940441883,
+      "tpr": {
+       "svhn": 48.58,
+       "cifar100": 69.52000000000001,
+       "lsun": 66.2,
+       "dtd": 59.419999999999995,
+       "noise": 1.2
+      },
+      "shift_flag": {
+       "all": 16.346666666666668,
+       "brightness": 8.6,
+       "contrast": 11.600000000000001,
+       "defocus_blur": 9.700000000000001,
+       "elastic_transform": 17.1,
+       "fog": 12.5,
+       "frost": 13.450000000000001,
+       "gaussian_noise": 22.7,
+       "glass_blur": 37.6,
+       "impulse_noise": 15.9,
+       "jpeg_compression": 17.150000000000002,
+       "motion_blur": 14.549999999999999,
+       "pixelate": 18.85,
+       "shot_noise": 20.45,
+       "snow": 13.3,
+       "zoom_blur": 11.75
+      },
+      "shift_acc_accepted": 96.4775262990118,
+      "shift_acc_flagged": 68.59706362153344
+     }
+    },
+    "bh": {
+     "svhn": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "cifar100": {
+      "fdr": 3.862660944206009,
+      "power": 17.919999999999998
+     },
+     "lsun": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "dtd": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   }
+  },
+  "maha_multi_unif": {
+   "auroc": {
+    "svhn": 99.968134,
+    "cifar100": 92.120902,
+    "lsun": 99.990258,
+    "dtd": 99.80026600000001,
+    "noise": 100.0
+   },
+   "aupr": {
+    "svhn": 99.92094801876652,
+    "cifar100": 87.07410791915238,
+    "lsun": 99.97768345707755,
+    "dtd": 99.60235300035319,
+    "noise": 100.0
+   },
+   "fpr95": {
+    "svhn": 0.1,
+    "cifar100": 38.4,
+    "lsun": 0.04,
+    "dtd": 0.8699999999999999,
+    "noise": 0.0
+   },
+   "marginal": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.6799999999999999,
+      "id_far_per_group": [
+       2.1439509954058193,
+       0.8125677139761647,
+       0.202122283981809,
+       0.19029495718363465,
+       0.14191106906338694
+      ],
+      "id_acc_accepted": 98.82198952879581,
+      "id_acc_flagged": 94.11764705882352,
+      "tpr": {
+       "svhn": 99.78,
+       "cifar100": 36.28,
+       "lsun": 99.98,
+       "dtd": 93.74,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 28.673333333333336,
+       "brightness": 4.55,
+       "contrast": 26.75,
+       "defocus_blur": 4.3999999999999995,
+       "elastic_transform": 1.7000000000000002,
+       "fog": 3.05,
+       "frost": 9.75,
+       "gaussian_noise": 99.6,
+       "glass_blur": 36.55,
+       "impulse_noise": 90.10000000000001,
+       "jpeg_compression": 34.050000000000004,
+       "motion_blur": 5.6000000000000005,
+       "pixelate": 12.049999999999999,
+       "shot_noise": 92.10000000000001,
+       "snow": 5.8500000000000005,
+       "zoom_blur": 4.0
+      },
+      "shift_acc_accepted": 95.28460603794747,
+      "shift_acc_flagged": 83.55033713089979
+     },
+     "0.05": {
+      "id_far": 4.37,
+      "id_far_per_group": [
+       9.494640122511486,
+       6.121343445287107,
+       3.031834259727135,
+       2.47383444338725,
+       1.229895931882687
+      ],
+      "id_acc_accepted": 98.90201819512706,
+      "id_acc_flagged": 96.33867276887872,
+      "tpr": {
+       "svhn": 100.0,
+       "cifar100": 63.7,
+       "lsun": 100.0,
+       "dtd": 99.32,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 46.876666666666665,
+       "brightness": 18.45,
+       "contrast": 46.650000000000006,
+       "defocus_blur": 20.1,
+       "elastic_transform": 11.05,
+       "fog": 12.75,
+       "frost": 36.15,
+       "gaussian_noise": 100.0,
+       "glass_blur": 81.85,
+       "impulse_noise": 98.7,
+       "jpeg_compression": 75.5,
+       "motion_blur": 26.150000000000002,
+       "pixelate": 32.15,
+       "shot_noise": 98.7,
+       "snow": 23.599999999999998,
+       "zoom_blur": 21.349999999999998
+      },
+      "shift_acc_accepted": 97.63443559013616,
+      "shift_acc_flagged": 85.44407309962313
+     },
+     "0.1": {
+      "id_far": 10.08,
+      "id_far_per_group": [
+       19.346605410923942,
+       13.921993499458289,
+       8.28701364325417,
+       5.566127497621313,
+       4.304635761589404
+      ],
+      "id_acc_accepted": 99.01023131672598,
+      "id_acc_flagged": 96.82539682539682,
+      "tpr": {
+       "svhn": 100.0,
+       "cifar100": 76.66,
+       "lsun": 100.0,
+       "dtd": 99.88,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 58.91333333333333,
+       "brightness": 32.25,
+       "contrast": 60.5,
+       "defocus_blur": 34.050000000000004,
+       "elastic_transform": 24.2,
+       "fog": 24.05,
+       "frost": 55.65,
+       "gaussian_noise": 100.0,
+       "glass_blur": 94.75,
+       "impulse_noise": 99.8,
+       "jpeg_compression": 88.6,
+       "motion_blur": 43.6,
+       "pixelate": 46.800000000000004,
+       "shot_noise": 99.75,
+       "snow": 40.6,
+       "zoom_blur": 39.1
+      },
+      "shift_acc_accepted": 98.31251014116502,
+      "shift_acc_flagged": 87.4618083059862
+     }
+    },
+    "bh": {
+     "svhn": {
+      "fdr": 6.559521584750513,
+      "power": 100.0
+     },
+     "cifar100": {
+      "fdr": 5.811623246492986,
+      "power": 47.0
+     },
+     "lsun": {
+      "fdr": 6.559521584750513,
+      "power": 100.0
+     },
+     "dtd": {
+      "fdr": 6.626392297526902,
+      "power": 98.92
+     },
+     "noise": {
+      "fdr": 7.578558225508318,
+      "power": 100.0
+     }
+    }
+   },
+   "mondrian": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.7000000000000001,
+      "id_far_per_group": [
+       1.2251148545176112,
+       0.37919826652221017,
+       0.202122283981809,
+       1.379638439581351,
+       0.28382213812677387
+      ],
+      "id_acc_accepted": 98.81168177240684,
+      "id_acc_flagged": 95.71428571428572,
+      "tpr": {
+       "svhn": 99.28,
+       "cifar100": 27.62,
+       "lsun": 99.9,
+       "dtd": 90.48,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 25.83666666666667,
+       "brightness": 3.65,
+       "contrast": 24.0,
+       "defocus_blur": 3.4000000000000004,
+       "elastic_transform": 0.8999999999999999,
+       "fog": 2.3,
+       "frost": 6.7,
+       "gaussian_noise": 99.6,
+       "glass_blur": 23.45,
+       "impulse_noise": 87.75,
+       "jpeg_compression": 26.450000000000003,
+       "motion_blur": 2.9499999999999997,
+       "pixelate": 7.55,
+       "shot_noise": 92.30000000000001,
+       "snow": 4.35,
+       "zoom_blur": 2.1999999999999997
+      },
+      "shift_acc_accepted": 94.51660748797698,
+      "shift_acc_flagged": 84.46652044897432
+     },
+     "0.05": {
+      "id_far": 3.88,
+      "id_far_per_group": [
+       4.492087799897907,
+       4.8754062838569885,
+       2.2738756947953513,
+       5.1379638439581345,
+       2.696310312204352
+      ],
+      "id_acc_accepted": 98.82438618393674,
+      "id_acc_flagged": 97.9381443298969,
+      "tpr": {
+       "svhn": 100.0,
+       "cifar100": 50.660000000000004,
+       "lsun": 100.0,
+       "dtd": 97.68,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 42.52333333333333,
+       "brightness": 17.2,
+       "contrast": 44.75,
+       "defocus_blur": 16.05,
+       "elastic_transform": 6.7,
+       "fog": 8.35,
+       "frost": 29.849999999999998,
+       "gaussian_noise": 100.0,
+       "glass_blur": 67.0,
+       "impulse_noise": 98.8,
+       "jpeg_compression": 69.95,
+       "motion_blur": 18.4,
+       "pixelate": 26.75,
+       "shot_noise": 99.0,
+       "snow": 19.1,
+       "zoom_blur": 15.950000000000001
+      },
+      "shift_acc_accepted": 96.22455489184017,
+      "shift_acc_flagged": 86.10174805988868
+     },
+     "0.1": {
+      "id_far": 8.9,
+      "id_far_per_group": [
+       9.80091883614089,
+       8.450704225352112,
+       6.013137948458818,
+       11.274976213130353,
+       8.798486281929991
+      ],
+      "id_acc_accepted": 98.84742041712404,
+      "id_acc_flagged": 98.20224719101124,
+      "tpr": {
+       "svhn": 100.0,
+       "cifar100": 64.2,
+       "lsun": 100.0,
+       "dtd": 99.42,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 53.559999999999995,
+       "brightness": 30.2,
+       "contrast": 56.99999999999999,
+       "defocus_blur": 28.999999999999996,
+       "elastic_transform": 14.799999999999999,
+       "fog": 17.4,
+       "frost": 48.949999999999996,
+       "gaussian_noise": 100.0,
+       "glass_blur": 86.7,
+       "impulse_noise": 99.8,
+       "jpeg_compression": 83.7,
+       "motion_blur": 32.95,
+       "pixelate": 39.45,
+       "shot_noise": 99.7,
+       "snow": 34.1,
+       "zoom_blur": 29.65
+      },
+      "shift_acc_accepted": 97.38013207005454,
+      "shift_acc_flagged": 87.18571072940004
+     }
+    },
+    "bh": {
+     "svhn": {
+      "fdr": 5.233219567690557,
+      "power": 99.96000000000001
+     },
+     "cifar100": {
+      "fdr": 4.429065743944636,
+      "power": 27.62
+     },
+     "lsun": {
+      "fdr": 5.2322274881516595,
+      "power": 99.98
+     },
+     "dtd": {
+      "fdr": 5.054858934169279,
+      "power": 96.92
+     },
+     "noise": {
+      "fdr": 5.571293673276676,
+      "power": 100.0
+     }
+    }
+   }
+  },
+  "maha_multi_err": {
+   "auroc": {
+    "svhn": 99.92023,
+    "cifar100": 99.024466,
+    "lsun": 99.59876600000001,
+    "dtd": 99.920708,
+    "noise": 99.99671
+   },
+   "aupr": {
+    "svhn": 99.8046577077106,
+    "cifar100": 98.34756131448364,
+    "lsun": 99.16415361222398,
+    "dtd": 99.84024564611698,
+    "noise": 99.9800690631153
+   },
+   "fpr95": {
+    "svhn": 0.21,
+    "cifar100": 4.61,
+    "lsun": 1.81,
+    "dtd": 0.12,
+    "noise": 0.01
+   },
+   "marginal": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.9400000000000001,
+      "id_far_per_group": [
+       4.747320061255743,
+       0.054171180931744306,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 98.98041590954976,
+      "id_acc_flagged": 78.72340425531915,
+      "tpr": {
+       "svhn": 98.76,
+       "cifar100": 86.78,
+       "lsun": 91.94,
+       "dtd": 98.92,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 12.396666666666667,
+       "brightness": 1.7000000000000002,
+       "contrast": 7.5,
+       "defocus_blur": 4.0,
+       "elastic_transform": 8.799999999999999,
+       "fog": 7.3999999999999995,
+       "frost": 9.15,
+       "gaussian_noise": 22.75,
+       "glass_blur": 41.0,
+       "impulse_noise": 20.45,
+       "jpeg_compression": 11.1,
+       "motion_blur": 9.75,
+       "pixelate": 13.850000000000001,
+       "shot_noise": 17.25,
+       "snow": 5.7,
+       "zoom_blur": 5.55
+      },
+      "shift_acc_accepted": 96.31292568775922,
+      "shift_acc_flagged": 60.876579725732725
+     },
+     "0.05": {
+      "id_far": 6.18,
+      "id_far_per_group": [
+       27.71822358346095,
+       3.358613217768147,
+       0.6568974229408793,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 99.52035813259434,
+      "id_acc_flagged": 87.70226537216828,
+      "tpr": {
+       "svhn": 99.86,
+       "cifar100": 96.26,
+       "lsun": 98.58,
+       "dtd": 99.68,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 29.526666666666667,
+       "brightness": 10.5,
+       "contrast": 21.9,
+       "defocus_blur": 14.799999999999999,
+       "elastic_transform": 24.85,
+       "fog": 20.25,
+       "frost": 24.15,
+       "gaussian_noise": 46.7,
+       "glass_blur": 68.55,
+       "impulse_noise": 44.75,
+       "jpeg_compression": 33.550000000000004,
+       "motion_blur": 26.85,
+       "pixelate": 29.75,
+       "shot_noise": 37.6,
+       "snow": 18.6,
+       "zoom_blur": 20.1
+      },
+      "shift_acc_accepted": 99.14388421152209,
+      "shift_acc_flagged": 74.6782569428765
+     },
+     "0.1": {
+      "id_far": 10.57,
+      "id_far_per_group": [
+       42.87901990811638,
+       9.479956663055255,
+       2.0717534108135425,
+       0.04757373929590866,
+       0.0
+      ],
+      "id_acc_accepted": 99.72045174997206,
+      "id_acc_flagged": 90.91769157994324,
+      "tpr": {
+       "svhn": 99.96000000000001,
+       "cifar100": 97.76,
+       "lsun": 99.48,
+       "dtd": 99.86,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 38.196666666666665,
+       "brightness": 16.85,
+       "contrast": 31.0,
+       "defocus_blur": 22.5,
+       "elastic_transform": 32.65,
+       "fog": 27.900000000000002,
+       "frost": 32.05,
+       "gaussian_noise": 57.099999999999994,
+       "glass_blur": 76.75,
+       "impulse_noise": 57.199999999999996,
+       "jpeg_compression": 42.699999999999996,
+       "motion_blur": 36.449999999999996,
+       "pixelate": 37.55,
+       "shot_noise": 47.75,
+       "snow": 26.6,
+       "zoom_blur": 27.900000000000002
+      },
+      "shift_acc_accepted": 99.56313035974327,
+      "shift_acc_flagged": 79.55318963260319
+     }
+    },
+    "bh": {
+     "svhn": {
+      "fdr": 7.8558225508317925,
+      "power": 99.7
+     },
+     "cifar100": {
+      "fdr": 8.073929961089494,
+      "power": 94.5
+     },
+     "lsun": {
+      "fdr": 7.890772128060264,
+      "power": 97.82
+     },
+     "dtd": {
+      "fdr": 7.87037037037037,
+      "power": 99.5
+     },
+     "noise": {
+      "fdr": 7.106363214119833,
+      "power": 100.0
+     }
+    }
+   },
+   "mondrian": {
+    "levels": {
+     "0.01": {
+      "id_far": 1.17,
+      "id_far_per_group": [
+       1.3782542113323124,
+       2.112676056338028,
+       1.4653865588681152,
+       0.23786869647954328,
+       0.804162724692526
+      ],
+      "id_acc_accepted": 98.8869776383689,
+      "id_acc_flagged": 90.5982905982906,
+      "tpr": {
+       "svhn": 96.44,
+       "cifar100": 77.5,
+       "lsun": 81.94,
+       "dtd": 97.64,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 7.886666666666667,
+       "brightness": 1.5,
+       "contrast": 5.7,
+       "defocus_blur": 2.5,
+       "elastic_transform": 5.050000000000001,
+       "fog": 4.8,
+       "frost": 5.1499999999999995,
+       "gaussian_noise": 13.0,
+       "glass_blur": 29.049999999999997,
+       "impulse_noise": 13.5,
+       "jpeg_compression": 6.25,
+       "motion_blur": 5.35,
+       "pixelate": 9.55,
+       "shot_noise": 10.15,
+       "snow": 3.5000000000000004,
+       "zoom_blur": 3.25
+      },
+      "shift_acc_accepted": 94.61532894260694,
+      "shift_acc_flagged": 60.43956043956044
+     },
+     "0.05": {
+      "id_far": 4.590000000000001,
+      "id_far_per_group": [
+       4.747320061255743,
+       4.604550379198267,
+       6.417382516422436,
+       3.56803044719315,
+       3.736991485335856
+      ],
+      "id_acc_accepted": 98.94141075358978,
+      "id_acc_flagged": 95.64270152505446,
+      "tpr": {
+       "svhn": 98.94,
+       "cifar100": 87.66000000000001,
+       "lsun": 92.80000000000001,
+       "dtd": 99.08,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 18.906666666666666,
+       "brightness": 7.249999999999999,
+       "contrast": 16.3,
+       "defocus_blur": 8.450000000000001,
+       "elastic_transform": 13.450000000000001,
+       "fog": 12.7,
+       "frost": 15.35,
+       "gaussian_noise": 30.099999999999998,
+       "glass_blur": 47.449999999999996,
+       "impulse_noise": 33.550000000000004,
+       "jpeg_compression": 17.549999999999997,
+       "motion_blur": 15.35,
+       "pixelate": 18.85,
+       "shot_noise": 24.65,
+       "snow": 11.450000000000001,
+       "zoom_blur": 11.15
+      },
+      "shift_acc_accepted": 96.03337717855969,
+      "shift_acc_flagged": 74.27715091678421
+     },
+     "0.1": {
+      "id_far": 9.82,
+      "id_far_per_group": [
+       8.984175599795813,
+       11.05092091007584,
+       10.1566447700859,
+       10.371075166508087,
+       8.656575212866603
+      ],
+      "id_acc_accepted": 99.10179640718563,
+      "id_acc_flagged": 95.9266802443992,
+      "tpr": {
+       "svhn": 99.4,
+       "cifar100": 91.58,
+       "lsun": 96.04,
+       "dtd": 99.44,
+       "noise": 100.0
+      },
+      "shift_flag": {
+       "all": 28.896666666666665,
+       "brightness": 13.850000000000001,
+       "contrast": 26.400000000000002,
+       "defocus_blur": 16.35,
+       "elastic_transform": 22.5,
+       "fog": 21.099999999999998,
+       "frost": 24.85,
+       "gaussian_noise": 44.95,
+       "glass_blur": 61.0,
+       "impulse_noise": 46.25,
+       "jpeg_compression": 28.499999999999996,
+       "motion_blur": 24.65,
+       "pixelate": 27.900000000000002,
+       "shot_noise": 37.1,
+       "snow": 20.0,
+       "zoom_blur": 18.05
+      },
+      "shift_acc_accepted": 96.9105995968309,
+      "shift_acc_flagged": 79.64009689698928
+     }
+    },
+    "bh": {
+     "svhn": {
+      "fdr": 6.859410430839002,
+      "power": 98.58
+     },
+     "cifar100": {
+      "fdr": 7.180616740088105,
+      "power": 84.28
+     },
+     "lsun": {
+      "fdr": 7.038733860891296,
+      "power": 89.28
+     },
+     "dtd": {
+      "fdr": 6.846473029045644,
+      "power": 98.78
+     },
+     "noise": {
+      "fdr": 8.634079488350844,
+      "power": 100.0
+     }
+    }
+   }
+  }
+ }
+}

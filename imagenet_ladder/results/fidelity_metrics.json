@@ -1,0 +1,44 @@
+{
+ "imagenet/ode8": {
+  "top1_agree": 0.641125,
+  "top5_agree": 0.894125,
+  "kl_fm_to_flow": 1.0655319312116296,
+  "acc_flow": 0.605625,
+  "acc_fm": 0.816825
+ },
+ "imagenet/ode": {
+  "top1_agree": 0.16295,
+  "top5_agree": 0.37735,
+  "kl_fm_to_flow": 3.744417640563564,
+  "acc_flow": 0.1579,
+  "acc_fm": 0.816825
+ },
+ "cifar10/ode8": {
+  "top1_agree": 0.986,
+  "top5_agree": 0.9998,
+  "kl_fm_to_flow": 0.032620813015449474,
+  "acc_flow": 0.9797,
+  "acc_fm": 0.9879
+ },
+ "cifar10/ode": {
+  "top1_agree": 0.8969,
+  "top5_agree": 0.9959,
+  "kl_fm_to_flow": 0.3560550439310911,
+  "acc_flow": 0.8943,
+  "acc_fm": 0.9879
+ },
+ "cifar100/ode8": {
+  "top1_agree": 0.9038,
+  "top5_agree": 0.9918,
+  "kl_fm_to_flow": 0.20928387424279077,
+  "acc_flow": 0.8726,
+  "acc_fm": 0.9253
+ },
+ "cifar100/ode": {
+  "top1_agree": 0.5998,
+  "top5_agree": 0.8509,
+  "kl_fm_to_flow": 1.4164417653458972,
+  "acc_flow": 0.5909,
+  "acc_fm": 0.9253
+ }
+}

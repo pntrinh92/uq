@@ -1,0 +1,5 @@
+T_star       heldout_9=0.149±0.104  rotated=0.146±0.045  noise=0.143±0.061  misclassified=0.137±0.113
+score_norm   heldout_9=0.910±0.016  rotated=0.958±0.015  noise=0.965±0.013  misclassified=0.945±0.034
+inv_curv     heldout_9=0.097±0.054  rotated=0.080±0.024  noise=0.078±0.036  misclassified=0.068±0.042
+entropy      heldout_9=0.904±0.054  rotated=0.921±0.025  noise=0.921±0.038  misclassified=0.932±0.041
+mahalanobis  heldout_9=0.911±0.029  rotated=0.957±0.013  noise=0.962±0.015  misclassified=0.950±0.026

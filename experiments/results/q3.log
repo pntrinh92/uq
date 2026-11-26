@@ -1,0 +1,26 @@
+tree {'d': 1, 'K': 2, 'N': 2, 'value': 0.5919200458228955, 'evals': 3, 'err_vs_discrete': 0.0044357836187292055, 'err_vs_continuous': 0.02928043550908166}
+tree {'d': 1, 'K': 2, 'N': 3, 'value': 0.5978913146837358, 'evals': 4, 'err_vs_discrete': 0.001535485242111112, 'err_vs_continuous': 0.023309166648241342}
+tree {'d': 1, 'K': 2, 'N': 4, 'value': 0.5960688447322424, 'evals': 5, 'err_vs_discrete': 0.0002869847093822653, 'err_vs_continuous': 0.02513163659973472}
+tree {'d': 1, 'K': 4, 'N': 2, 'value': 0.6078570191826744, 'evals': 15, 'err_vs_discrete': 0.001847894213487744, 'err_vs_continuous': 0.01334346214930271}
+tree {'d': 1, 'K': 4, 'N': 3, 'value': 0.6099191915307949, 'evals': 40, 'err_vs_discrete': 0.00021427813463270606, 'err_vs_continuous': 0.01128128980118226}
+tree {'d': 1, 'K': 4, 'N': 4, 'value': 0.609683753695946, 'evals': 85, 'err_vs_discrete': 2.1159700216211164e-05, 'err_vs_continuous': 0.011516727636031177}
+tree {'d': 1, 'K': 8, 'N': 2, 'value': 0.6148163428088806, 'evals': 255, 'err_vs_discrete': 0.0008376986990386026, 'err_vs_continuous': 0.006384138523096494}
+tree {'d': 1, 'K': 8, 'N': 3, 'value': 0.6156923329236592, 'evals': 3280, 'err_vs_discrete': 3.8291415739966084e-05, 'err_vs_continuous': 0.0055081484083179255}
+tree {'d': 1, 'K': 8, 'N': 4, 'value': 0.6156521862766385, 'evals': 21845, 'err_vs_discrete': 1.8552312807118554e-06, 'err_vs_continuous': 0.0055482950553386035}
+tree {'d': 2, 'K': 2, 'N': 2, 'value': 0.5945356270887754, 'evals': 5, 'err_vs_discrete': 0.0018202023528491873, 'err_vs_continuous': 0.026664854243201752}
+tree {'d': 2, 'K': 2, 'N': 3, 'value': 0.5965918639693192, 'evals': 10, 'err_vs_discrete': 0.0002360345276946063, 'err_vs_continuous': 0.02460861736265796}
+tree {'d': 2, 'K': 2, 'N': 4, 'value': 0.5963350101605326, 'evals': 17, 'err_vs_discrete': 2.0819281091988273e-05, 'err_vs_continuous': 0.024865471171444553}
+tree {'d': 2, 'K': 4, 'N': 2, 'value': 0.6088436571104106, 'evals': 85, 'err_vs_discrete': 0.0008612562857516215, 'err_vs_continuous': 0.012356824221566587}
+tree {'d': 2, 'K': 4, 'N': 3, 'value': 0.6097460965714405, 'evals': 820, 'err_vs_discrete': 4.1183175278347584e-05, 'err_vs_continuous': 0.011454384760536618}
+tree {'d': 2, 'K': 4, 'N': 4, 'value': 0.6097028643107629, 'evals': 4369, 'err_vs_discrete': 2.049085399247197e-06, 'err_vs_continuous': 0.011497617021214213}
+tree {'d': 2, 'K': 8, 'N': 2, 'value': 0.6152477437813734, 'evals': 21845, 'err_vs_discrete': 0.0004062977265457679, 'err_vs_continuous': 0.0059527375506037705}
+mc {'d': 1, 'K': 8, 'M': 10, 'evals': 80, 'rmse_vs_discrete': 0.08317334273136816, 'disc_bias': 0.005546439824057892}
+mc {'d': 1, 'K': 8, 'M': 100, 'evals': 800, 'rmse_vs_discrete': 0.027598840239440505, 'disc_bias': 0.005546439824057892}
+mc {'d': 1, 'K': 8, 'M': 1000, 'evals': 8000, 'rmse_vs_discrete': 0.008901236878990691, 'disc_bias': 0.005546439824057892}
+mc {'d': 1, 'K': 8, 'M': 10000, 'evals': 80000, 'rmse_vs_discrete': 0.0016941265977495987, 'disc_bias': 0.005546439824057892}
+mc {'d': 1, 'K': 8, 'M': 100000, 'evals': 800000, 'rmse_vs_discrete': 0.0006694966525465096, 'disc_bias': 0.005546439824057892}
+mc {'d': 2, 'K': 8, 'M': 10, 'evals': 80, 'rmse_vs_discrete': 0.08163393701235902, 'disc_bias': 0.005546439824058003}
+mc {'d': 2, 'K': 8, 'M': 100, 'evals': 800, 'rmse_vs_discrete': 0.02846992167958836, 'disc_bias': 0.005546439824058003}
+mc {'d': 2, 'K': 8, 'M': 1000, 'evals': 8000, 'rmse_vs_discrete': 0.008131147851060054, 'disc_bias': 0.005546439824058003}
+mc {'d': 2, 'K': 8, 'M': 10000, 'evals': 80000, 'rmse_vs_discrete': 0.002554500715146717, 'disc_bias': 0.005546439824058003}
+mc {'d': 2, 'K': 8, 'M': 100000, 'evals': 800000, 'rmse_vs_discrete': 0.0007327502417763916, 'disc_bias': 0.005546439824058003}

@@ -1,0 +1,8 @@
+# Duplicate clone of the DIRECTOR authors' repo (TransDiff); the real runs live in /ephemeral
+director_repro/
+# Build artefacts and backups
+*.zip
+*.bak_*
+__pycache__/
+*.pyc
+.DS_Store

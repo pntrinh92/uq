@@ -1,0 +1,19 @@
+{
+ "agree": 0.8070999979972839,
+ "top5_agree": 0.9606999754905701,
+ "kl": 0.4166078567504883,
+ "rel_e1": 0.30164477229118347,
+ "acc": 0.7519000172615051,
+ "tag": "ode8_full",
+ "adapter_rank": 0,
+ "data": [
+  "train",
+  "train2",
+  "train3a",
+  "train3b",
+  "train3c"
+ ],
+ "init": "/ephemeral/trinhpn_uq/ckpt/ode8_flownet.pt",
+ "params_M": 66.329856,
+ "ckpt": "/ephemeral/trinhpn_uq/ckpt/ode8_full_flownet.pt"
+}

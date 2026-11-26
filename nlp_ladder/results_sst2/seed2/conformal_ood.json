@@ -1,0 +1,1414 @@
+{
+ "T_A1": 1.8511530534728613,
+ "split": {
+  "A1": 218,
+  "A2": 218,
+  "test": 1821
+ },
+ "theta_err": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  1.0
+ ],
+ "group_sizes_A2": [
+  59,
+  50,
+  28,
+  46,
+  35
+ ],
+ "pac": {
+  "0.01": 0.017724911912816024,
+  "0.05": 0.06438611059385614,
+  "0.1": 0.12203413006607672
+ },
+ "ood_kind": {
+  "ag_news": "domain",
+  "newsgroups": "domain",
+  "noise": "far"
+ },
+ "scores": {
+  "msp": {
+   "auroc": {
+    "ag_news": 83.04151565074136,
+    "newsgroups": 83.93831411312466,
+    "noise": 87.96313838550248
+   },
+   "aupr": {
+    "ag_news": 90.01481687379267,
+    "newsgroups": 90.58974596972675,
+    "noise": 84.07978878088498
+   },
+   "fpr95": {
+    "ag_news": 43.49258649093905,
+    "newsgroups": 41.790225151015925,
+    "noise": 33.77265238879736
+   },
+   "marginal": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.21965952773201539,
+      "id_far_per_group": [
+       0.9111617312072893,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 92.73527793065493,
+      "id_acc_flagged": 25.0,
+      "tpr": {
+       "ag_news": 0.98,
+       "newsgroups": 0.72,
+       "noise": 1.3
+      },
+      "shift_flag": {
+       "all": 0.36,
+       "imdb": 0.38,
+       "yelp": 0.33999999999999997
+      },
+      "shift_acc_accepted": 83.93215576073865,
+      "shift_acc_flagged": 47.22222222222222
+     },
+     "0.05": {
+      "id_far": 3.789126853377265,
+      "id_far_per_group": [
+       15.717539863325742,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 94.17808219178082,
+      "id_acc_flagged": 52.17391304347826,
+      "tpr": {
+       "ag_news": 13.320000000000002,
+       "newsgroups": 14.719999999999999,
+       "noise": 21.099999999999998
+      },
+      "shift_flag": {
+       "all": 7.870000000000001,
+       "imdb": 8.74,
+       "yelp": 7.000000000000001
+      },
+      "shift_acc_accepted": 86.30196461521763,
+      "shift_acc_flagged": 54.510800508259216
+     },
+     "0.1": {
+      "id_far": 7.852828116419549,
+      "id_far_per_group": [
+       32.57403189066059,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 95.64958283671037,
+      "id_acc_flagged": 56.64335664335665,
+      "tpr": {
+       "ag_news": 29.659999999999997,
+       "newsgroups": 32.24,
+       "noise": 42.9
+      },
+      "shift_flag": {
+       "all": 17.48,
+       "imdb": 19.54,
+       "yelp": 15.42
+      },
+      "shift_acc_accepted": 89.20261754726127,
+      "shift_acc_flagged": 58.29519450800915
+     }
+    },
+    "bh": {
+     "ag_news": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "newsgroups": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   },
+   "mondrian": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.0,
+      "id_far_per_group": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 92.58649093904448,
+      "id_acc_flagged": NaN,
+      "tpr": {
+       "ag_news": 0.0,
+       "newsgroups": 0.0,
+       "noise": 0.0
+      },
+      "shift_flag": {
+       "all": 0.0,
+       "imdb": 0.0,
+       "yelp": 0.0
+      },
+      "shift_acc_accepted": 83.8,
+      "shift_acc_flagged": NaN
+     },
+     "0.05": {
+      "id_far": 3.9538714991762767,
+      "id_far_per_group": [
+       2.277904328018223,
+       10.352941176470589,
+       2.083333333333333,
+       2.4475524475524475,
+       1.1940298507462688
+      ],
+      "id_acc_accepted": 92.7958833619211,
+      "id_acc_flagged": 87.5,
+      "tpr": {
+       "ag_news": 7.5,
+       "newsgroups": 7.12,
+       "noise": 6.9
+      },
+      "shift_flag": {
+       "all": 5.55,
+       "imdb": 5.319999999999999,
+       "yelp": 5.779999999999999
+      },
+      "shift_acc_accepted": 84.31974589730015,
+      "shift_acc_flagged": 74.95495495495496
+     },
+     "0.1": {
+      "id_far": 12.520593080724876,
+      "id_far_per_group": [
+       12.984054669703873,
+       21.176470588235293,
+       4.464285714285714,
+       8.391608391608392,
+       12.53731343283582
+      ],
+      "id_acc_accepted": 93.53421217827997,
+      "id_acc_flagged": 85.96491228070175,
+      "tpr": {
+       "ag_news": 19.64,
+       "newsgroups": 20.1,
+       "noise": 23.65
+      },
+      "shift_flag": {
+       "all": 15.39,
+       "imdb": 15.86,
+       "yelp": 14.92
+      },
+      "shift_acc_accepted": 85.50998699917267,
+      "shift_acc_flagged": 74.39896036387265
+     }
+    },
+    "bh": {
+     "ag_news": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "newsgroups": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   }
+  },
+  "entropy": {
+   "auroc": {
+    "ag_news": 83.0414607358594,
+    "newsgroups": 83.93872597473916,
+    "noise": 87.96300109829764
+   },
+   "aupr": {
+    "ag_news": 90.01555111084527,
+    "newsgroups": 90.59050026614388,
+    "noise": 84.0807607202301
+   },
+   "fpr95": {
+    "ag_news": 43.49258649093905,
+    "newsgroups": 41.790225151015925,
+    "noise": 33.77265238879736
+   },
+   "marginal": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.21965952773201539,
+      "id_far_per_group": [
+       0.9111617312072893,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 92.73527793065493,
+      "id_acc_flagged": 25.0,
+      "tpr": {
+       "ag_news": 0.98,
+       "newsgroups": 0.72,
+       "noise": 1.3
+      },
+      "shift_flag": {
+       "all": 0.36,
+       "imdb": 0.38,
+       "yelp": 0.33999999999999997
+      },
+      "shift_acc_accepted": 83.93215576073865,
+      "shift_acc_flagged": 47.22222222222222
+     },
+     "0.05": {
+      "id_far": 3.789126853377265,
+      "id_far_per_group": [
+       15.717539863325742,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 94.17808219178082,
+      "id_acc_flagged": 52.17391304347826,
+      "tpr": {
+       "ag_news": 13.320000000000002,
+       "newsgroups": 14.719999999999999,
+       "noise": 21.099999999999998
+      },
+      "shift_flag": {
+       "all": 7.870000000000001,
+       "imdb": 8.74,
+       "yelp": 7.000000000000001
+      },
+      "shift_acc_accepted": 86.30196461521763,
+      "shift_acc_flagged": 54.510800508259216
+     },
+     "0.1": {
+      "id_far": 7.852828116419549,
+      "id_far_per_group": [
+       32.57403189066059,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 95.64958283671037,
+      "id_acc_flagged": 56.64335664335665,
+      "tpr": {
+       "ag_news": 29.659999999999997,
+       "newsgroups": 32.24,
+       "noise": 42.9
+      },
+      "shift_flag": {
+       "all": 17.48,
+       "imdb": 19.54,
+       "yelp": 15.42
+      },
+      "shift_acc_accepted": 89.20261754726127,
+      "shift_acc_flagged": 58.29519450800915
+     }
+    },
+    "bh": {
+     "ag_news": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "newsgroups": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   },
+   "mondrian": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.0,
+      "id_far_per_group": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 92.58649093904448,
+      "id_acc_flagged": NaN,
+      "tpr": {
+       "ag_news": 0.0,
+       "newsgroups": 0.0,
+       "noise": 0.0
+      },
+      "shift_flag": {
+       "all": 0.0,
+       "imdb": 0.0,
+       "yelp": 0.0
+      },
+      "shift_acc_accepted": 83.8,
+      "shift_acc_flagged": NaN
+     },
+     "0.05": {
+      "id_far": 3.9538714991762767,
+      "id_far_per_group": [
+       2.277904328018223,
+       10.352941176470589,
+       2.083333333333333,
+       2.4475524475524475,
+       1.1940298507462688
+      ],
+      "id_acc_accepted": 92.7958833619211,
+      "id_acc_flagged": 87.5,
+      "tpr": {
+       "ag_news": 7.539999999999999,
+       "newsgroups": 7.140000000000001,
+       "noise": 6.950000000000001
+      },
+      "shift_flag": {
+       "all": 5.64,
+       "imdb": 5.42,
+       "yelp": 5.86
+      },
+      "shift_acc_accepted": 84.30479016532429,
+      "shift_acc_flagged": 75.35460992907801
+     },
+     "0.1": {
+      "id_far": 12.520593080724876,
+      "id_far_per_group": [
+       12.984054669703873,
+       21.176470588235293,
+       4.464285714285714,
+       8.391608391608392,
+       12.53731343283582
+      ],
+      "id_acc_accepted": 93.53421217827997,
+      "id_acc_flagged": 85.96491228070175,
+      "tpr": {
+       "ag_news": 19.64,
+       "newsgroups": 20.1,
+       "noise": 23.65
+      },
+      "shift_flag": {
+       "all": 15.409999999999998,
+       "imdb": 15.879999999999999,
+       "yelp": 14.940000000000001
+      },
+      "shift_acc_accepted": 85.50656105922685,
+      "shift_acc_flagged": 74.43218689162882
+     }
+    },
+    "bh": {
+     "ag_news": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "newsgroups": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   }
+  },
+  "energy": {
+   "auroc": {
+    "ag_news": 81.95813289401428,
+    "newsgroups": 85.82272377814387,
+    "noise": 90.45219659527733
+   },
+   "aupr": {
+    "ag_news": 90.74818885727649,
+    "newsgroups": 92.2162765148892,
+    "noise": 88.38514575778518
+   },
+   "fpr95": {
+    "ag_news": 54.64030752333883,
+    "newsgroups": 39.209225700164744,
+    "noise": 29.70895112575508
+   },
+   "marginal": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.7138934651290499,
+      "id_far_per_group": [
+       2.9612756264236904,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 92.97566371681415,
+      "id_acc_flagged": 38.46153846153847,
+      "tpr": {
+       "ag_news": 6.84,
+       "newsgroups": 6.260000000000001,
+       "noise": 11.200000000000001
+      },
+      "shift_flag": {
+       "all": 0.9900000000000001,
+       "imdb": 0.74,
+       "yelp": 1.24
+      },
+      "shift_acc_accepted": 84.21371578628421,
+      "shift_acc_flagged": 42.42424242424242
+     },
+     "0.05": {
+      "id_far": 3.2948929159802307,
+      "id_far_per_group": [
+       13.66742596810934,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 93.92390687109597,
+      "id_acc_flagged": 53.333333333333336,
+      "tpr": {
+       "ag_news": 16.32,
+       "newsgroups": 17.76,
+       "noise": 26.400000000000002
+      },
+      "shift_flag": {
+       "all": 7.32,
+       "imdb": 8.06,
+       "yelp": 6.58
+      },
+      "shift_acc_accepted": 86.16745791972377,
+      "shift_acc_flagged": 53.825136612021865
+     },
+     "0.1": {
+      "id_far": 7.797913234486546,
+      "id_far_per_group": [
+       32.346241457858774,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 95.17569982132221,
+      "id_acc_flagged": 61.97183098591549,
+      "tpr": {
+       "ag_news": 34.62,
+       "newsgroups": 37.68,
+       "noise": 55.25
+      },
+      "shift_flag": {
+       "all": 17.96,
+       "imdb": 19.16,
+       "yelp": 16.76
+      },
+      "shift_acc_accepted": 89.15163334958557,
+      "shift_acc_flagged": 59.354120267260576
+     }
+    },
+    "bh": {
+     "ag_news": {
+      "fdr": 3.7142857142857144,
+      "power": 6.74
+     },
+     "newsgroups": {
+      "fdr": 4.0625,
+      "power": 6.140000000000001
+     },
+     "noise": {
+      "fdr": 5.485232067510549,
+      "power": 11.200000000000001
+     }
+    }
+   },
+   "mondrian": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.0,
+      "id_far_per_group": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 92.58649093904448,
+      "id_acc_flagged": NaN,
+      "tpr": {
+       "ag_news": 0.0,
+       "newsgroups": 0.0,
+       "noise": 0.0
+      },
+      "shift_flag": {
+       "all": 0.0,
+       "imdb": 0.0,
+       "yelp": 0.0
+      },
+      "shift_acc_accepted": 83.8,
+      "shift_acc_flagged": NaN
+     },
+     "0.05": {
+      "id_far": 4.228445908841296,
+      "id_far_per_group": [
+       3.189066059225513,
+       11.058823529411764,
+       2.976190476190476,
+       0.6993006993006993,
+       1.1940298507462688
+      ],
+      "id_acc_accepted": 92.77522935779817,
+      "id_acc_flagged": 88.31168831168831,
+      "tpr": {
+       "ag_news": 12.46,
+       "newsgroups": 13.54,
+       "noise": 17.599999999999998
+      },
+      "shift_flag": {
+       "all": 4.12,
+       "imdb": 3.2,
+       "yelp": 5.04
+      },
+      "shift_acc_accepted": 84.10513141426783,
+      "shift_acc_flagged": 76.69902912621359
+     },
+     "0.1": {
+      "id_far": 10.70840197693575,
+      "id_far_per_group": [
+       6.378132118451026,
+       22.35294117647059,
+       3.571428571428571,
+       6.643356643356643,
+       12.238805970149254
+      ],
+      "id_acc_accepted": 92.619926199262,
+      "id_acc_flagged": 92.3076923076923,
+      "tpr": {
+       "ag_news": 17.560000000000002,
+       "newsgroups": 21.22,
+       "noise": 24.3
+      },
+      "shift_flag": {
+       "all": 10.08,
+       "imdb": 9.06,
+       "yelp": 11.1
+      },
+      "shift_acc_accepted": 84.53069395017793,
+      "shift_acc_flagged": 77.28174603174604
+     }
+    },
+    "bh": {
+     "ag_news": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "newsgroups": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   }
+  },
+  "maha_z": {
+   "auroc": {
+    "ag_news": 87.93147721032402,
+    "newsgroups": 90.58372322899505,
+    "noise": 77.45112575507963
+   },
+   "aupr": {
+    "ag_news": 94.06592948875623,
+    "newsgroups": 95.59445755865615,
+    "noise": 69.5158288364442
+   },
+   "fpr95": {
+    "ag_news": 38.60516199890171,
+    "newsgroups": 30.971993410214164,
+    "noise": 50.68643602416255
+   },
+   "marginal": {
+    "levels": {
+     "0.01": {
+      "id_far": 1.1532125205930808,
+      "id_far_per_group": [
+       3.189066059225513,
+       0.9411764705882352,
+       0.2976190476190476,
+       0.6993006993006993,
+       0.0
+      ],
+      "id_acc_accepted": 92.77777777777779,
+      "id_acc_flagged": 76.19047619047619,
+      "tpr": {
+       "ag_news": 14.64,
+       "newsgroups": 22.88,
+       "noise": 0.65
+      },
+      "shift_flag": {
+       "all": 1.43,
+       "imdb": 1.78,
+       "yelp": 1.08
+      },
+      "shift_acc_accepted": 84.15339352744242,
+      "shift_acc_flagged": 59.44055944055944
+     },
+     "0.05": {
+      "id_far": 2.5260845689181766,
+      "id_far_per_group": [
+       7.289293849658314,
+       2.1176470588235294,
+       0.8928571428571428,
+       0.6993006993006993,
+       0.0
+      ],
+      "id_acc_accepted": 93.12676056338029,
+      "id_acc_flagged": 71.73913043478261,
+      "tpr": {
+       "ag_news": 28.32,
+       "newsgroups": 36.84,
+       "noise": 2.4
+      },
+      "shift_flag": {
+       "all": 5.11,
+       "imdb": 6.12,
+       "yelp": 4.1000000000000005
+      },
+      "shift_acc_accepted": 85.05638107282117,
+      "shift_acc_flagged": 60.46966731898239
+     },
+     "0.1": {
+      "id_far": 6.260296540362438,
+      "id_far_per_group": [
+       18.45102505694761,
+       4.235294117647059,
+       3.273809523809524,
+       1.048951048951049,
+       0.2985074626865672
+      ],
+      "id_acc_accepted": 93.96602226127709,
+      "id_acc_flagged": 71.9298245614035,
+      "tpr": {
+       "ag_news": 44.92,
+       "newsgroups": 53.66,
+       "noise": 9.4
+      },
+      "shift_flag": {
+       "all": 13.81,
+       "imdb": 15.0,
+       "yelp": 12.620000000000001
+      },
+      "shift_acc_accepted": 86.81981668407008,
+      "shift_acc_flagged": 64.95293265749457
+     }
+    },
+    "bh": {
+     "ag_news": {
+      "fdr": 2.788844621513944,
+      "power": 14.64
+     },
+     "newsgroups": {
+      "fdr": 1.841903300076746,
+      "power": 25.580000000000002
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   },
+   "mondrian": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.0,
+      "id_far_per_group": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 92.58649093904448,
+      "id_acc_flagged": NaN,
+      "tpr": {
+       "ag_news": 0.0,
+       "newsgroups": 0.0,
+       "noise": 0.0
+      },
+      "shift_flag": {
+       "all": 0.0,
+       "imdb": 0.0,
+       "yelp": 0.0
+      },
+      "shift_acc_accepted": 83.8,
+      "shift_acc_flagged": NaN
+     },
+     "0.05": {
+      "id_far": 2.471169686985173,
+      "id_far_per_group": [
+       3.644646924829157,
+       4.235294117647059,
+       2.6785714285714284,
+       0.6993006993006993,
+       0.0
+      ],
+      "id_acc_accepted": 92.73648648648648,
+      "id_acc_flagged": 86.66666666666667,
+      "tpr": {
+       "ag_news": 18.8,
+       "newsgroups": 27.62,
+       "noise": 0.8500000000000001
+      },
+      "shift_flag": {
+       "all": 2.64,
+       "imdb": 2.88,
+       "yelp": 2.4
+      },
+      "shift_acc_accepted": 84.18241577649958,
+      "shift_acc_flagged": 69.6969696969697
+     },
+     "0.1": {
+      "id_far": 3.7342119714442616,
+      "id_far_per_group": [
+       4.555808656036446,
+       4.470588235294118,
+       3.869047619047619,
+       1.7482517482517483,
+       3.2835820895522385
+      ],
+      "id_acc_accepted": 92.81232173416998,
+      "id_acc_flagged": 86.76470588235294,
+      "tpr": {
+       "ag_news": 23.880000000000003,
+       "newsgroups": 32.9,
+       "noise": 1.2
+      },
+      "shift_flag": {
+       "all": 4.16,
+       "imdb": 4.74,
+       "yelp": 3.58
+      },
+      "shift_acc_accepted": 84.45325542570951,
+      "shift_acc_flagged": 68.75
+     }
+    },
+    "bh": {
+     "ag_news": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "newsgroups": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   }
+  },
+  "rmd_z": {
+   "auroc": {
+    "ag_news": 19.013201537616695,
+    "newsgroups": 11.809247666117518,
+    "noise": 42.85496979681494
+   },
+   "aupr": {
+    "ag_news": 58.9829598746774,
+    "newsgroups": 55.46853577584747,
+    "noise": 53.60770670023369
+   },
+   "fpr95": {
+    "ag_news": 99.56068094453597,
+    "newsgroups": 100.0,
+    "noise": 91.37836353651839
+   },
+   "marginal": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.16474464579901155,
+      "id_far_per_group": [
+       0.683371298405467,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 92.62926292629263,
+      "id_acc_flagged": 66.66666666666666,
+      "tpr": {
+       "ag_news": 0.06,
+       "newsgroups": 0.0,
+       "noise": 0.65
+      },
+      "shift_flag": {
+       "all": 0.06999999999999999,
+       "imdb": 0.08,
+       "yelp": 0.06
+      },
+      "shift_acc_accepted": 83.80866606624637,
+      "shift_acc_flagged": 71.42857142857143
+     },
+     "0.05": {
+      "id_far": 3.0203185063152116,
+      "id_far_per_group": [
+       11.845102505694761,
+       0.0,
+       0.0,
+       0.0,
+       0.8955223880597015
+      ],
+      "id_acc_accepted": 93.4881087202718,
+      "id_acc_flagged": 63.63636363636363,
+      "tpr": {
+       "ag_news": 3.06,
+       "newsgroups": 1.76,
+       "noise": 13.900000000000002
+      },
+      "shift_flag": {
+       "all": 3.34,
+       "imdb": 3.32,
+       "yelp": 3.36
+      },
+      "shift_acc_accepted": 84.93689219946204,
+      "shift_acc_flagged": 50.898203592814376
+     },
+     "0.1": {
+      "id_far": 8.017572762218562,
+      "id_far_per_group": [
+       17.539863325740317,
+       0.0,
+       1.488095238095238,
+       1.7482517482517483,
+       17.611940298507463
+      ],
+      "id_acc_accepted": 93.67164179104478,
+      "id_acc_flagged": 80.13698630136986,
+      "tpr": {
+       "ag_news": 4.46,
+       "newsgroups": 2.52,
+       "noise": 16.950000000000003
+      },
+      "shift_flag": {
+       "all": 4.55,
+       "imdb": 4.66,
+       "yelp": 4.44
+      },
+      "shift_acc_accepted": 85.28025144054479,
+      "shift_acc_flagged": 52.74725274725275
+     }
+    },
+    "bh": {
+     "ag_news": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "newsgroups": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   },
+   "mondrian": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.0,
+      "id_far_per_group": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 92.58649093904448,
+      "id_acc_flagged": NaN,
+      "tpr": {
+       "ag_news": 0.0,
+       "newsgroups": 0.0,
+       "noise": 0.0
+      },
+      "shift_flag": {
+       "all": 0.0,
+       "imdb": 0.0,
+       "yelp": 0.0
+      },
+      "shift_acc_accepted": 83.8,
+      "shift_acc_flagged": NaN
+     },
+     "0.05": {
+      "id_far": 2.7457440966501925,
+      "id_far_per_group": [
+       2.050113895216401,
+       3.5294117647058822,
+       2.6785714285714284,
+       4.895104895104895,
+       0.8955223880597015
+      ],
+      "id_acc_accepted": 92.54658385093167,
+      "id_acc_flagged": 94.0,
+      "tpr": {
+       "ag_news": 0.48,
+       "newsgroups": 0.16,
+       "noise": 2.65
+      },
+      "shift_flag": {
+       "all": 0.54,
+       "imdb": 0.45999999999999996,
+       "yelp": 0.62
+      },
+      "shift_acc_accepted": 83.92318520008043,
+      "shift_acc_flagged": 61.111111111111114
+     },
+     "0.1": {
+      "id_far": 7.962657880285557,
+      "id_far_per_group": [
+       5.466970387243736,
+       10.352941176470589,
+       7.440476190476191,
+       12.237762237762238,
+       5.074626865671641
+      ],
+      "id_acc_accepted": 92.66109785202865,
+      "id_acc_flagged": 91.72413793103448,
+      "tpr": {
+       "ag_news": 1.0999999999999999,
+       "newsgroups": 0.5599999999999999,
+       "noise": 5.7
+      },
+      "shift_flag": {
+       "all": 1.2,
+       "imdb": 1.1400000000000001,
+       "yelp": 1.26
+      },
+      "shift_acc_accepted": 84.13967611336032,
+      "shift_acc_flagged": 55.833333333333336
+     }
+    },
+    "bh": {
+     "ag_news": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "newsgroups": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   }
+  },
+  "maha_multi_unif": {
+   "auroc": {
+    "ag_news": 90.4785282811642,
+    "newsgroups": 96.29732015376166,
+    "noise": 90.09590884129598
+   },
+   "aupr": {
+    "ag_news": 94.8236087756809,
+    "newsgroups": 98.36474709606813,
+    "noise": 85.17664405167757
+   },
+   "fpr95": {
+    "ag_news": 27.51235584843493,
+    "newsgroups": 15.32125205930807,
+    "noise": 22.844590884129598
+   },
+   "marginal": {
+    "levels": {
+     "0.01": {
+      "id_far": 1.757276221856123,
+      "id_far_per_group": [
+       4.100227790432802,
+       1.647058823529412,
+       1.488095238095238,
+       0.6993006993006993,
+       0.0
+      ],
+      "id_acc_accepted": 92.78926774734488,
+      "id_acc_flagged": 81.25,
+      "tpr": {
+       "ag_news": 18.44,
+       "newsgroups": 55.620000000000005,
+       "noise": 8.0
+      },
+      "shift_flag": {
+       "all": 25.44,
+       "imdb": 29.78,
+       "yelp": 21.099999999999998
+      },
+      "shift_acc_accepted": 86.27950643776823,
+      "shift_acc_flagged": 76.53301886792453
+     },
+     "0.05": {
+      "id_far": 3.2399780340472266,
+      "id_far_per_group": [
+       6.83371298405467,
+       3.058823529411765,
+       3.869047619047619,
+       1.048951048951049,
+       0.0
+      ],
+      "id_acc_accepted": 92.96254256526673,
+      "id_acc_flagged": 81.35593220338984,
+      "tpr": {
+       "ag_news": 30.0,
+       "newsgroups": 68.0,
+       "noise": 16.5
+      },
+      "shift_flag": {
+       "all": 37.87,
+       "imdb": 44.98,
+       "yelp": 30.759999999999998
+      },
+      "shift_acc_accepted": 87.3330114276517,
+      "shift_acc_flagged": 78.00369685767097
+     },
+     "0.1": {
+      "id_far": 5.601317957166392,
+      "id_far_per_group": [
+       10.933940774487471,
+       4.941176470588235,
+       5.059523809523809,
+       3.8461538461538463,
+       1.4925373134328357
+      ],
+      "id_acc_accepted": 93.13554392088423,
+      "id_acc_flagged": 83.33333333333334,
+      "tpr": {
+       "ag_news": 44.64,
+       "newsgroups": 78.48,
+       "noise": 30.7
+      },
+      "shift_flag": {
+       "all": 50.61,
+       "imdb": 59.74,
+       "yelp": 41.48
+      },
+      "shift_acc_accepted": 89.12735371532699,
+      "shift_acc_flagged": 78.60106698280973
+     }
+    },
+    "bh": {
+     "ag_news": {
+      "fdr": 3.3621517771373677,
+      "power": 20.119999999999997
+     },
+     "newsgroups": {
+      "fdr": 1.838952354416272,
+      "power": 70.46
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   },
+   "mondrian": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.0,
+      "id_far_per_group": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 92.58649093904448,
+      "id_acc_flagged": NaN,
+      "tpr": {
+       "ag_news": 0.0,
+       "newsgroups": 0.0,
+       "noise": 0.0
+      },
+      "shift_flag": {
+       "all": 0.0,
+       "imdb": 0.0,
+       "yelp": 0.0
+      },
+      "shift_acc_accepted": 83.8,
+      "shift_acc_flagged": NaN
+     },
+     "0.05": {
+      "id_far": 3.2399780340472266,
+      "id_far_per_group": [
+       6.150341685649203,
+       4.941176470588235,
+       2.380952380952381,
+       1.048951048951049,
+       0.0
+      ],
+      "id_acc_accepted": 92.96254256526673,
+      "id_acc_flagged": 81.35593220338984,
+      "tpr": {
+       "ag_news": 27.72,
+       "newsgroups": 67.28,
+       "noise": 13.750000000000002
+      },
+      "shift_flag": {
+       "all": 37.980000000000004,
+       "imdb": 44.86,
+       "yelp": 31.1
+      },
+      "shift_acc_accepted": 86.64946791357626,
+      "shift_acc_flagged": 79.14691943127961
+     },
+     "0.1": {
+      "id_far": 4.557935200439319,
+      "id_far_per_group": [
+       7.744874715261959,
+       5.411764705882352,
+       4.464285714285714,
+       2.097902097902098,
+       1.4925373134328357
+      ],
+      "id_acc_accepted": 93.0379746835443,
+      "id_acc_flagged": 83.13253012048193,
+      "tpr": {
+       "ag_news": 36.66,
+       "newsgroups": 73.83999999999999,
+       "noise": 20.3
+      },
+      "shift_flag": {
+       "all": 46.18,
+       "imdb": 54.66,
+       "yelp": 37.7
+      },
+      "shift_acc_accepted": 87.40245261984393,
+      "shift_acc_flagged": 79.60155911650065
+     }
+    },
+    "bh": {
+     "ag_news": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "newsgroups": {
+      "fdr": 1.7236342389716621,
+      "power": 67.28
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   }
+  },
+  "maha_multi_err": {
+   "auroc": {
+    "ag_news": 87.93147721032402,
+    "newsgroups": 90.58372322899505,
+    "noise": 77.45112575507963
+   },
+   "aupr": {
+    "ag_news": 94.06592948875623,
+    "newsgroups": 95.59445755865615,
+    "noise": 69.5158288364442
+   },
+   "fpr95": {
+    "ag_news": 38.60516199890171,
+    "newsgroups": 30.971993410214164,
+    "noise": 50.68643602416255
+   },
+   "marginal": {
+    "levels": {
+     "0.01": {
+      "id_far": 1.1532125205930808,
+      "id_far_per_group": [
+       3.189066059225513,
+       0.9411764705882352,
+       0.2976190476190476,
+       0.6993006993006993,
+       0.0
+      ],
+      "id_acc_accepted": 92.77777777777779,
+      "id_acc_flagged": 76.19047619047619,
+      "tpr": {
+       "ag_news": 14.64,
+       "newsgroups": 22.88,
+       "noise": 0.65
+      },
+      "shift_flag": {
+       "all": 1.43,
+       "imdb": 1.78,
+       "yelp": 1.08
+      },
+      "shift_acc_accepted": 84.15339352744242,
+      "shift_acc_flagged": 59.44055944055944
+     },
+     "0.05": {
+      "id_far": 2.5260845689181766,
+      "id_far_per_group": [
+       7.289293849658314,
+       2.1176470588235294,
+       0.8928571428571428,
+       0.6993006993006993,
+       0.0
+      ],
+      "id_acc_accepted": 93.12676056338029,
+      "id_acc_flagged": 71.73913043478261,
+      "tpr": {
+       "ag_news": 28.32,
+       "newsgroups": 36.84,
+       "noise": 2.4
+      },
+      "shift_flag": {
+       "all": 5.11,
+       "imdb": 6.12,
+       "yelp": 4.1000000000000005
+      },
+      "shift_acc_accepted": 85.05638107282117,
+      "shift_acc_flagged": 60.46966731898239
+     },
+     "0.1": {
+      "id_far": 6.260296540362438,
+      "id_far_per_group": [
+       18.45102505694761,
+       4.235294117647059,
+       3.273809523809524,
+       1.048951048951049,
+       0.2985074626865672
+      ],
+      "id_acc_accepted": 93.96602226127709,
+      "id_acc_flagged": 71.9298245614035,
+      "tpr": {
+       "ag_news": 44.92,
+       "newsgroups": 53.66,
+       "noise": 9.4
+      },
+      "shift_flag": {
+       "all": 13.81,
+       "imdb": 15.0,
+       "yelp": 12.620000000000001
+      },
+      "shift_acc_accepted": 86.81981668407008,
+      "shift_acc_flagged": 64.95293265749457
+     }
+    },
+    "bh": {
+     "ag_news": {
+      "fdr": 2.788844621513944,
+      "power": 14.64
+     },
+     "newsgroups": {
+      "fdr": 1.841903300076746,
+      "power": 25.580000000000002
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   },
+   "mondrian": {
+    "levels": {
+     "0.01": {
+      "id_far": 0.0,
+      "id_far_per_group": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "id_acc_accepted": 92.58649093904448,
+      "id_acc_flagged": NaN,
+      "tpr": {
+       "ag_news": 0.0,
+       "newsgroups": 0.0,
+       "noise": 0.0
+      },
+      "shift_flag": {
+       "all": 0.0,
+       "imdb": 0.0,
+       "yelp": 0.0
+      },
+      "shift_acc_accepted": 83.8,
+      "shift_acc_flagged": NaN
+     },
+     "0.05": {
+      "id_far": 2.471169686985173,
+      "id_far_per_group": [
+       3.644646924829157,
+       4.235294117647059,
+       2.6785714285714284,
+       0.6993006993006993,
+       0.0
+      ],
+      "id_acc_accepted": 92.73648648648648,
+      "id_acc_flagged": 86.66666666666667,
+      "tpr": {
+       "ag_news": 18.8,
+       "newsgroups": 27.62,
+       "noise": 0.8500000000000001
+      },
+      "shift_flag": {
+       "all": 2.64,
+       "imdb": 2.88,
+       "yelp": 2.4
+      },
+      "shift_acc_accepted": 84.18241577649958,
+      "shift_acc_flagged": 69.6969696969697
+     },
+     "0.1": {
+      "id_far": 3.7342119714442616,
+      "id_far_per_group": [
+       4.555808656036446,
+       4.470588235294118,
+       3.869047619047619,
+       1.7482517482517483,
+       3.2835820895522385
+      ],
+      "id_acc_accepted": 92.81232173416998,
+      "id_acc_flagged": 86.76470588235294,
+      "tpr": {
+       "ag_news": 23.880000000000003,
+       "newsgroups": 32.9,
+       "noise": 1.2
+      },
+      "shift_flag": {
+       "all": 4.16,
+       "imdb": 4.74,
+       "yelp": 3.58
+      },
+      "shift_acc_accepted": 84.45325542570951,
+      "shift_acc_flagged": 68.75
+     }
+    },
+    "bh": {
+     "ag_news": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "newsgroups": {
+      "fdr": 0.0,
+      "power": 0.0
+     },
+     "noise": {
+      "fdr": 0.0,
+      "power": 0.0
+     }
+    }
+   }
+  }
+ }
+}

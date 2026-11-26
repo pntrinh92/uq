@@ -1,0 +1,21 @@
+| Method | Acc | NLL | ECE | Shift NLL | Shift ECE | OOD AUROC (mean of 3) | AUROC held-out 9 |
+|---|---|---|---|---|---|---|---|
+| FM (deterministic) | 0.978 ± 0.006 | 0.099 ± 0.022 | 0.018 ± 0.005 | 1.614 ± 0.167 | 0.237 ± 0.016 | 0.915 ± 0.017 | 0.904 ± 0.054 |
+| Temperature scaling | 0.978 ± 0.006 | 0.093 ± 0.015 | 0.017 ± 0.004 | 1.495 ± 0.176 | 0.226 ± 0.008 | 0.916 ± 0.016 | 0.905 ± 0.052 |
+| MC dropout | 0.979 ± 0.005 | 0.075 ± 0.015 | 0.015 ± 0.002 | 1.208 ± 0.131 | 0.148 ± 0.022 | 0.925 ± 0.012 | 0.920 ± 0.039 |
+| MC dropout + TS | 0.979 ± 0.005 | 0.079 ± 0.012 | 0.018 ± 0.003 | 1.582 ± 0.511 | 0.179 ± 0.028 | – | – |
+| Deep ensemble (5) | 0.990 ± 0.004 | 0.050 ± 0.014 | 0.015 ± 0.002 | 0.801 ± 0.057 | 0.064 ± 0.012 | 0.971 ± 0.005 | 0.948 ± 0.013 |
+| TS + GMM Mahalanobis (OOD) | 0.978 ± 0.006 | 0.093 ± 0.015 | 0.017 ± 0.004 | 1.495 ± 0.176 | 0.226 ± 0.008 | 0.943 ± 0.009 | 0.911 ± 0.029 |
+| SDE family (z only), picked on val NLL | 0.978 ± 0.007 | 0.100 ± 0.023 | 0.019 ± 0.004 | 1.626 ± 0.177 | 0.245 ± 0.023 | 0.915 ± 0.017 | 0.904 ± 0.054 |
+| SDE family (all blocks), picked on val NLL | 0.984 ± 0.003 | 0.080 ± 0.032 | 0.015 ± 0.003 | 1.314 ± 0.131 | 0.176 ± 0.010 | 0.905 ± 0.026 | 0.876 ± 0.082 |
+| SDE family (either), picked on val NLL | 0.984 ± 0.003 | 0.080 ± 0.032 | 0.015 ± 0.003 | 1.314 ± 0.131 | 0.176 ± 0.010 | 0.905 ± 0.026 | 0.876 ± 0.082 |
+| SDE family (z only) + TS, picked on val NLL | 0.978 ± 0.007 | 0.094 ± 0.016 | 0.016 ± 0.004 | 1.501 ± 0.174 | 0.230 ± 0.010 | 0.915 ± 0.017 | 0.904 ± 0.054 |
+| SDE family (all blocks) + TS, picked on val NLL | 0.984 ± 0.003 | 0.078 ± 0.025 | 0.013 ± 0.004 | 1.378 ± 0.240 | 0.178 ± 0.013 | 0.905 ± 0.026 | 0.876 ± 0.082 |
+| SDE family (either) + TS, picked on val NLL | 0.984 ± 0.003 | 0.078 ± 0.025 | 0.013 ± 0.004 | 1.378 ± 0.240 | 0.178 ± 0.013 | 0.905 ± 0.026 | 0.876 ± 0.082 |
+
+Configs picked on val NLL: {'z only': ["('final', 'precond', 25, True, 0.001)", "('final', 'iso', 5, True, 0.369375)", "('final', 'precond', 5, True, 0.005415)", "('final', 'precond', 25, True, 0.005415)", "('final', 'iso', 5, True, 0.001)"], 'all blocks': ["('all', 'precond', 5, True, 0.029317)", "('all', 'precond', 5, True, 0.15874)", "('all', 'precond', 5, True, 0.029317)", "('all', 'precond', 5, True, 0.029317)", "('all', 'precond', 5, True, 0.029317)"], 'either': ["('all', 'precond', 5, True, 0.029317)", "('all', 'precond', 5, True, 0.15874)", "('all', 'precond', 5, True, 0.029317)", "('all', 'precond', 5, True, 0.029317)", "('all', 'precond', 5, True, 0.029317)"]}
+Configs picked on val NLL (+TS): {'z only': ["('final', 'precond', 25, True, 0.001)", "('final', 'precond', 5, True, 0.005415)", "('final', 'iso', 5, True, 0.369375)", "('final', 'precond', 25, True, 0.005415)", "('final', 'iso', 5, True, 0.001)"], 'all blocks': ["('all', 'precond', 5, True, 0.029317)", "('all', 'precond', 5, True, 0.15874)", "('all', 'precond', 5, True, 0.029317)", "('all', 'precond', 5, True, 0.029317)", "('all', 'precond', 5, True, 0.029317)"], 'either': ["('all', 'precond', 5, True, 0.029317)", "('all', 'precond', 5, True, 0.15874)", "('all', 'precond', 5, True, 0.029317)", "('all', 'precond', 5, True, 0.029317)", "('all', 'precond', 5, True, 0.029317)"]}
+
+Oracle (test-picked) MALA configs beating TS on NLL+ECE and MCD on mean OOD AUROC: 0 -> []
+Same, with TS applied on top of the SDE: 0 -> []
+Oracle configs beating TS on NLL+ECE and TS+GMM on mean OOD AUROC: 0 -> []

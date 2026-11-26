@@ -1,0 +1,6 @@
+  split1 {'variant': 'all', 'D': 'precond', 'h': 0.001, 'K': 5, 'mala': True} acc=0.966 nll=0.122 ece=0.026 sh_nll=1.503 flip=0.000 E/det=0.002 accept=1.00 auroc9=0.914
+  split1 {'variant': 'all', 'D': 'precond', 'h': 0.005414548164181543, 'K': 5, 'mala': True} acc=0.969 nll=0.108 ece=0.021 sh_nll=1.422 flip=0.009 E/det=0.010 accept=1.00 auroc9=0.914
+  split1 {'variant': 'all', 'D': 'precond', 'h': 0.029317331822241718, 'K': 5, 'mala': True} acc=0.975 nll=0.083 ece=0.017 sh_nll=1.163 flip=0.015 E/det=0.042 accept=0.99 auroc9=0.911
+  split1 {'variant': 'all', 'D': 'precond', 'h': 0.15874010519682002, 'K': 5, 'mala': True} acc=0.978 nll=0.133 ece=0.020 sh_nll=1.286 flip=0.025 E/det=0.066 accept=0.84 auroc9=0.740
+  split1 {'variant': 'all', 'D': 'precond', 'h': 0.8595059451754268, 'K': 5, 'mala': True} acc=0.975 nll=0.207 ece=0.023 sh_nll=2.119 flip=0.022 E/det=0.018 accept=0.43 auroc9=0.697
+  split1 {'variant': 'all', 'D': 'precond', 'h': 2.0, 'K': 5, 'mala': True} acc=0.966 nll=0.212 ece=0.030 sh_nll=2.028 flip=0.006 E/det=0.010 accept=0.21 auroc9=0.878

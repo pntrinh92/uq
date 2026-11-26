@@ -1,0 +1,53 @@
+
+== ID
+  block1           rho=-0.107±0.178  shrink=+1.079  E/det=0.1977
+  block2           rho=-0.432±0.252  shrink=+1.402  E/det=0.1672
+  block3           rho=-0.675±0.348  shrink=+1.642  E/det=0.1443
+  block4           rho=-0.875±0.376  shrink=+1.838  E/det=0.1231
+  block1_cls       rho=-0.399±0.198  shrink=+1.367  E/det=0.1544
+  block2_cls       rho=-0.887±0.127  shrink=+1.850  E/det=0.1126
+  block3_cls       rho=-1.414±0.050  shrink=+2.369  E/det=0.0840
+  block4_cls       rho=-1.843±0.059  shrink=+2.789  E/det=0.0644
+  z                rho=-0.042±0.004  shrink=+0.990  E/det=0.0764 mmd=-0.0014 (null -0.0035)
+  logits           rho=-1.340±0.102  shrink=+2.235  E/det=0.0319 mmd=-0.0013 (null -0.0035)
+  logits_ensemble  rho=-0.125±0.226  shrink=+0.891  E/det=0.0664
+
+== heldout_9
+  block1           rho=+0.352±0.091  shrink=+0.619  E/det=0.3476
+  block2           rho=+0.261±0.072  shrink=+0.711  E/det=0.3409
+  block3           rho=+0.191±0.073  shrink=+0.781  E/det=0.3312
+  block4           rho=+0.079±0.048  shrink=+0.891  E/det=0.2941
+  block1_cls       rho=+0.284±0.070  shrink=+0.688  E/det=0.3313
+  block2_cls       rho=+0.259±0.050  shrink=+0.712  E/det=0.3241
+  block3_cls       rho=+0.165±0.049  shrink=+0.805  E/det=0.2979
+  block4_cls       rho=+0.055±0.092  shrink=+0.914  E/det=0.2619
+  z                rho=+0.423±0.085  shrink=+0.546  E/det=0.2972 mmd=0.0043 (null -0.0067)
+  logits           rho=+0.169±0.135  shrink=+0.792  E/det=0.1928 mmd=0.0025 (null -0.0066)
+  logits_ensemble  rho=+0.161±0.141  shrink=+0.634  E/det=0.4937
+
+== rotated
+  block1           rho=+0.363±0.137  shrink=+0.614  E/det=0.3166
+  block2           rho=+0.244±0.182  shrink=+0.732  E/det=0.3208
+  block3           rho=+0.160±0.170  shrink=+0.817  E/det=0.3098
+  block4           rho=+0.071±0.149  shrink=+0.906  E/det=0.2950
+  block1_cls       rho=+0.321±0.137  shrink=+0.656  E/det=0.3550
+  block2_cls       rho=+0.203±0.128  shrink=+0.773  E/det=0.3133
+  block3_cls       rho=+0.069±0.125  shrink=+0.907  E/det=0.2720
+  block4_cls       rho=-0.005±0.115  shrink=+0.980  E/det=0.2535
+  z                rho=+0.262±0.137  shrink=+0.714  E/det=0.2933 mmd=0.0022 (null -0.0037)
+  logits           rho=-0.033±0.165  shrink=+1.005  E/det=0.2007 mmd=0.0013 (null -0.0036)
+  logits_ensemble  rho=+0.108±0.301  shrink=+0.691  E/det=0.7520
+
+== noise
+  block1           rho=+0.405±0.076  shrink=+0.571  E/det=0.3219
+  block2           rho=+0.338±0.111  shrink=+0.639  E/det=0.3339
+  block3           rho=+0.250±0.139  shrink=+0.727  E/det=0.3230
+  block4           rho=+0.136±0.146  shrink=+0.840  E/det=0.2931
+  block1_cls       rho=+0.232±0.104  shrink=+0.745  E/det=0.3132
+  block2_cls       rho=+0.171±0.095  shrink=+0.806  E/det=0.2971
+  block3_cls       rho=+0.063±0.085  shrink=+0.913  E/det=0.2667
+  block4_cls       rho=-0.053±0.099  shrink=+1.028  E/det=0.2361
+  z                rho=+0.185±0.071  shrink=+0.791  E/det=0.2646 mmd=0.0001 (null -0.0037)
+  logits           rho=-0.329±0.129  shrink=+1.298  E/det=0.1572 mmd=-0.0002 (null -0.0037)
+  logits_ensemble  rho=+0.358±0.139  shrink=+0.441  E/det=0.9809
+saved fig_exp0_rho.png
