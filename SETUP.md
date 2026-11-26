@@ -89,7 +89,7 @@ Copy only what the step you want to run needs. Sizes are from the old box.
 | `cifar_data`, `cifar10`, `cifar100` | 12 + 41 + 41 GB | CIFAR ladder |
 | `nlp_data`, `nlp` | 0.4 + 104 GB | NLP ladder: data, then fine-tuned Qwen checkpoints and features |
 
-- **Checkpoints from Hugging Face:** all checkpoint folders (`ckpt`, `cifar10/ckpt`, `cifar100/ckpt`, `nlp/*/seed*/ckpt`, 55.5 GB) are in the private repo `pntrinh92/uq-checkpoints`, laid out like `$UQ`. Run `hf download pntrinh92/uq-checkpoints --local-dir $UQ --token $(cat $UQ/hf_token)`; add `--include "ckpt/*"` to fetch only the ImageNet flows.
+- **Checkpoints from Hugging Face:** all checkpoint folders (`ckpt`, `cifar10/ckpt`, `cifar100/ckpt`, `nlp/*/seed*/ckpt`, 55.5 GB) are in the public repo [`pntrinh92/uq-checkpoints`](https://huggingface.co/pntrinh92/uq-checkpoints), laid out like `$UQ`. Run `hf download pntrinh92/uq-checkpoints --local-dir $UQ`; add `--include "ckpt/*"` to fetch only the ImageNet flows.
 - **ImageNet download:** ImageNet-1k on Hugging Face is gated. Put your own token in `$UQ/hf_token`, which `download_full_train.py` reads.
 - **Other models:** public models (ViT-B/16, Qwen2.5-0.5B) download on first use into `$UQ/hf_cache`.
 
