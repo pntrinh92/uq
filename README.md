@@ -15,6 +15,10 @@ This is research code and slides for the uncertainty-quantification project: a c
 | `figures/figure_Thrust1UQ/` | Plot scripts and figures used in the slides. |
 | `proposal_slides/`, `feedback_slides/`, `round2_slides/`, `thrust1_critique_overleaf/` | Beamer decks (compiled on Overleaf). |
 
+## Setup
+
+See [SETUP.md](SETUP.md) for running on a new server: environments (`envs/`), path configuration, GPU selection and which data to copy.
+
 ## Not in this repository
 
 - **Checkpoints, features and environments** stay on the compute box under `/ephemeral/trinhpn_uq`, about 870 GB.
