@@ -21,6 +21,7 @@ import timm
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from torch.utils.checkpoint import checkpoint
 
 from inl_common import CKPT, FEAT, FM_NAME, get_npy, load_fm, pick_gpu, readout, save_json, set_npy, val_split
 
@@ -38,6 +39,12 @@ LR = float(os.environ.get("COMPILE_LR", "5e-4"))
 ROLLOUT_START = int(os.environ.get("COMPILE_ROLLOUT_START", "1000"))
 # Weight of the rollout KL to the FM logits (lambda_KL; 0.1 in every run before ode8_full_kl1).
 LAM_KL = float(os.environ.get("COMPILE_LAM_KL", "0.1"))
+# Flow as the main model (2026-11-27): weight of a label cross-entropy on the rollout logits (lambda_CE; 0, i.e.
+# label-free, in every run before ode8_main_*), images rolled out per step (4 before), and activation checkpointing
+# of the rollout steps so a larger rollout batch fits on a shared GPU. Defaults reproduce the earlier runs.
+LAM_CE = float(os.environ.get("COMPILE_LAM_CE", "0"))
+ROLL_BATCH = int(os.environ.get("COMPILE_ROLL_BATCH", "4"))
+ROLL_CKPT = os.environ.get("COMPILE_ROLL_CKPT", "0") == "1"
 # Extra checkpoints kept at these steps (full-data run: compare with the 318k-image arm at equal steps).
 SNAPSHOTS = {int(v) for v in os.environ.get("COMPILE_SNAPSHOTS", "").split(",") if v}
 # `final` scores this checkpoint instead of <TAG>_flownet.pt when set (results go to compile_final_<TAG>_<suffix>.json).
@@ -175,15 +182,15 @@ def velocity_stats(vit, x0_all, device, n=2000, bs=50):
     return mu.float(), sigma.float(), state_sigma.float()
 
 
-def euler_rollout(net, x0, n_steps=None, keep_states=False):
-    """Integrate from t = K0/12 (state s_K0) to t = 1."""
+def euler_rollout(net, x0, n_steps=None, keep_states=False, ckpt=False):
+    """Integrate from t = K0/12 (state s_K0) to t = 1 (ckpt: recompute each step in the backward pass)."""
     n_steps = n_steps or N_BLOCKS - K0
     x, states = x0, []
     t_start = K0 / N_BLOCKS
     dt = (1.0 - t_start) / n_steps
     for k in range(n_steps):
         t = torch.full((x.shape[0],), t_start + k * dt, device=x.device)
-        x = x + dt * net(x, t)
+        x = x + dt * (checkpoint(net, x, t, use_reentrant=False) if ckpt else net(x, t))
         if keep_states:
             states.append(x)
     return x, states
@@ -224,16 +231,22 @@ class X0Pool:
         return out
 
 
-def train(steps=10_000, batch=32, roll_batch=4, lr=LR, lam_kl=LAM_KL, lam_state=1.0, rollout_start=ROLLOUT_START):
-    """Flow matching (Eq. 7) from step 0; rollout terms (state and KL to the FM) from rollout_start."""
-    device = pick_gpu()
+def train(steps=10_000, batch=32, roll_batch=ROLL_BATCH, lr=LR, lam_kl=LAM_KL, lam_state=1.0,
+          rollout_start=ROLLOUT_START, lam_ce=LAM_CE):
+    """Flow matching (Eq. 7) from step 0; rollout terms (state and KL to the FM, plus label CE when lam_ce > 0)
+    from rollout_start."""
+    device = pick_gpu(int(os.environ.get("COMPILE_MIN_FREE_MB", "3000")))
     vit = load_models(device)
     net = FlowNet().to(device)
     net.init_from_vit(vit)
     x0_all = X0Pool(DATA_SETS)
     n = len(x0_all)
+    # Labels aligned with the pooled x0 caches (same set order and row order as X0Pool).
+    y_all = np.concatenate([get_npy(f"{d}_labels", mmap=False) for d in DATA_SETS]) if lam_ce > 0 else None
+    assert y_all is None or len(y_all) == n, (len(y_all), n)
     print(f"[{TAG}] data {DATA_SETS} = {n} images, adapter rank {ADAPTER_RANK}, init {INIT or 'ViT block 6'}, "
-          f"steps {steps}, lr {lr}, lam_kl {lam_kl}", flush=True)
+          f"steps {steps}, lr {lr}, lam_kl {lam_kl}, lam_ce {lam_ce}, roll_batch {roll_batch}, "
+          f"roll_ckpt {ROLL_CKPT}", flush=True)
     mu, sigma, state_sigma = velocity_stats(vit, x0_all, device)
     net.v_mu.copy_(mu)
     net.v_sigma.copy_(sigma)
@@ -243,6 +256,7 @@ def train(steps=10_000, batch=32, roll_batch=4, lr=LR, lam_kl=LAM_KL, lam_state=
     val_x0 = get_npy("val_x0")
     probe = np.sort(val_split()["calB"][:500])
     probe_x0 = torch.from_numpy(np.asarray(val_x0[probe], dtype=np.float32))
+    probe_y = torch.from_numpy(get_npy("val_labels", mmap=False)[probe].astype(np.int64))
     opt = torch.optim.AdamW(net.parameters(), lr=lr, weight_decay=0.01)
     sched = torch.optim.lr_scheduler.LambdaLR(
         opt, lambda s: min(1.0, (s + 1) / 500) * 0.5 * (1 + math.cos(math.pi * min(s, steps) / steps)))
@@ -260,6 +274,7 @@ def train(steps=10_000, batch=32, roll_batch=4, lr=LR, lam_kl=LAM_KL, lam_state=
     for step in range(start, steps + 1):
         idx = np.sort(rng.choice(n, batch + roll_batch, replace=False))
         x0 = torch.from_numpy(x0_all[idx]).to(device)
+        y_roll = torch.from_numpy(y_all[idx][batch:]).to(device) if y_all is not None else None
         with torch.autocast("cuda", dtype=torch.bfloat16):
             s = teacher_states(vit, x0)
             # Amortized flow matching on linear interpolants between consecutive blocks.
@@ -276,15 +291,16 @@ def train(steps=10_000, batch=32, roll_batch=4, lr=LR, lam_kl=LAM_KL, lam_state=
             fm_loss = ((net.raw(xt, (kappa + u) / N_BLOCKS).float() - target) ** 2).mean()
             # Rollout term (lambda of Eq. 7): match block states (per-channel normalized) and FM logits
             # along the integrated ODE path; switched on after the flow-matching warm-up.
-            xr, states = euler_rollout(net, s[K0][batch:].float(), keep_states=True)
+            xr, states = euler_rollout(net, s[K0][batch:].float(), keep_states=True, ckpt=ROLL_CKPT)
             _, lg_s = readout(vit, xr)
             _, lg_t = readout(vit, s[-1][batch:])
             kl = F.kl_div(F.log_softmax(lg_s.float(), -1), F.log_softmax(lg_t.float(), -1), log_target=True,
                           reduction="batchmean")
             st = torch.stack([(((a.float() - b[batch:].float()) / state_sigma[K0 + k]) ** 2).mean()
                               for k, (a, b) in enumerate(zip(states, s[K0 + 1:]))]).mean()
+            ce = F.cross_entropy(lg_s.float(), y_roll) if y_roll is not None else torch.zeros((), device=device)
             ramp = 0.0 if step < rollout_start else min(1.0, (step - rollout_start) / 1000)
-            loss = fm_loss + ramp * (lam_kl * kl + lam_state * st)
+            loss = fm_loss + ramp * (lam_kl * kl + lam_state * st + lam_ce * ce)
         opt.zero_grad(set_to_none=True)
         loss.backward()
         torch.nn.utils.clip_grad_norm_(net.parameters(), 1.0)
@@ -292,8 +308,10 @@ def train(steps=10_000, batch=32, roll_batch=4, lr=LR, lam_kl=LAM_KL, lam_state=
         sched.step()
         if step % 200 == 0:
             rec = dict(step=step, fm=fm_loss.item(), kl=kl.item(), state=st.item(), sec=time.time() - t0)
+            if y_roll is not None:
+                rec["ce"] = ce.item()
             if step % 2000 == 0:
-                rec.update(fidelity(net, vit, probe_x0, device))
+                rec.update(fidelity(net, vit, probe_x0, device, labels=probe_y))
                 torch.save(net.state_dict(), f"{CKPT}/{TAG}_flownet.pt")
             log.append(rec)
             print(rec, flush=True)

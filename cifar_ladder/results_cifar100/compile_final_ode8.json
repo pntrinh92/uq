@@ -1,0 +1,16 @@
+{
+ "agree": 0.9041000008583069,
+ "top5_agree": 0.9918000102043152,
+ "kl": 0.2092747539281845,
+ "rel_e1": 0.26619115471839905,
+ "acc": 0.8726000189781189,
+ "tag": "ode8",
+ "adapter_rank": 0,
+ "data": [
+  "train"
+ ],
+ "init": "",
+ "lam_kl": 0.1,
+ "params_M": 66.329856,
+ "ckpt": "/ephemeral/trinhpn_uq/cifar100/ckpt/ode8_flownet.pt"
+}
